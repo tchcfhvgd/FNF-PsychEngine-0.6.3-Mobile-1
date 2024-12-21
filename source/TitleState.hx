@@ -258,49 +258,49 @@ class TitleState extends MusicBeatState
 
 		var bg1:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('Title/1'), 'dustin');
 		bg1.setGraphicSize(Std.int(bg1.width * 0.3));
-		bg1.antialiasing = ClientPrefs.antialiasing;
+		bg1.antialiasing = ClientPrefs.globalAntialiasing;
 		bg1.updateHitbox();
 		bg1.screenCenter();
 		add(bg1);
 		
 		var bg2:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('Title/2'), 'dustin');
 		bg2.setGraphicSize(Std.int(bg2.width * 0.3));
-		bg2.antialiasing = ClientPrefs.antialiasing;
+		bg2.antialiasing = ClientPrefs.globalAntialiasing;
 		bg2.updateHitbox();
 		bg2.screenCenter();
 		add(bg2);
 		
 		var bg3:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('Title/3'), 'dustin');
 		bg3.setGraphicSize(Std.int(bg3.width * 0.3));
-		bg3.antialiasing = ClientPrefs.antialiasing;
+		bg3.antialiasing = ClientPrefs.globalAntialiasing;
 		bg3.updateHitbox();
 		bg3.screenCenter();
 		add(bg3);
 		
 		var bg4:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('Title/4'), 'dustin');
 		bg4.setGraphicSize(Std.int(bg4.width * 0.3));
-		bg4.antialiasing = ClientPrefs.antialiasing;
+		bg4.antialiasing = ClientPrefs.globalAntialiasing;
 		bg4.updateHitbox();
 		bg4.screenCenter();
 		add(bg4);
 		
 		var bg5:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('Title/5'), 'dustin');
 		bg5.setGraphicSize(Std.int(bg5.width * 0.3));
-		bg5.antialiasing = ClientPrefs.antialiasing;
+		bg5.antialiasing = ClientPrefs.globalAntialiasing;
 		bg5.updateHitbox();
 		bg5.screenCenter();
 		add(bg5);
 		
 		var bg6:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('Title/6'), 'dustin');
 		bg6.setGraphicSize(Std.int(bg6.width * 0.3));
-		bg6.antialiasing = ClientPrefs.antialiasing;
+		bg6.antialiasing = ClientPrefs.globalAntialiasing;
 		bg6.updateHitbox();
 		bg6.screenCenter();
 		add(bg6);
 		
 		var bg7:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('Title/7'), 'dustin');
 		bg7.setGraphicSize(Std.int(bg7.width * 0.3));
-		bg7.antialiasing = ClientPrefs.antialiasing;
+		bg7.antialiasing = ClientPrefs.globalAntialiasing;
 		bg7.updateHitbox();
 		bg7.screenCenter();
 		add(bg7);
