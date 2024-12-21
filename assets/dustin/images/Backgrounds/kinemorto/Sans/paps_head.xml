@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="paps_head.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="PAPS_HEAD0000" x="20" y="20" width="192" height="231" frameX="0" frameY="-2" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0001" x="20" y="20" width="192" height="231" frameX="0" frameY="-2" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0002" x="232" y="20" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0003" x="232" y="20" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0004" x="442" y="20" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0005" x="442" y="20" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0006" x="652" y="20" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0007" x="652" y="20" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0008" x="20" y="274" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0009" x="20" y="274" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0010" x="20" y="274" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0011" x="20" y="274" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0012" x="20" y="274" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0013" x="20" y="274" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="PAPS_HEAD0014" x="20" y="274" width="190" height="234" frameX="-1" frameY="0" frameWidth="192" frameHeight="234"/>
+	<SubTexture name="fucking_dies0000" x="230" y="274" width="188" height="238" frameX="-1" frameY="-136" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0001" x="230" y="274" width="188" height="238" frameX="-1" frameY="-136" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0002" x="438" y="274" width="190" height="235" frameX="0" frameY="-138" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0003" x="438" y="274" width="190" height="235" frameX="0" frameY="-138" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0004" x="648" y="274" width="188" height="235" frameX="-1" frameY="-138" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0005" x="648" y="274" width="188" height="235" frameX="-1" frameY="-138" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0006" x="648" y="274" width="188" height="235" frameX="-1" frameY="-138" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0007" x="20" y="532" width="187" height="239" frameX="-2" frameY="-135" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0008" x="227" y="532" width="199" height="300" frameX="-7" frameY="-74" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0009" x="227" y="532" width="199" height="300" frameX="-7" frameY="-74" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0010" x="446" y="532" width="236" height="336" frameX="-20" frameY="-38" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0011" x="446" y="532" width="236" height="336" frameX="-20" frameY="-38" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0012" x="20" y="888" width="322" height="372" frameX="-75" frameY="0" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0013" x="20" y="888" width="322" height="372" frameX="-75" frameY="0" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0014" x="362" y="888" width="380" height="301" frameX="-85" frameY="-71" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0015" x="362" y="888" width="380" height="301" frameX="-85" frameY="-71" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0016" x="20" y="1280" width="298" height="218" frameX="-85" frameY="-154" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0017" x="20" y="1280" width="298" height="218" frameX="-85" frameY="-154" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0018" x="338" y="1280" width="110" height="23" frameX="-85" frameY="-349" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0019" x="338" y="1280" width="110" height="23" frameX="-85" frameY="-349" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0020" x="338" y="1280" width="110" height="23" frameX="-85" frameY="-349" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0021" x="338" y="1280" width="110" height="23" frameX="-85" frameY="-349" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0022" x="338" y="1280" width="110" height="23" frameX="-85" frameY="-349" frameWidth="465" frameHeight="374"/>
+	<SubTexture name="fucking_dies0023" x="338" y="1280" width="110" height="23" frameX="-85" frameY="-349" frameWidth="465" frameHeight="374"/>
+</TextureAtlas>
