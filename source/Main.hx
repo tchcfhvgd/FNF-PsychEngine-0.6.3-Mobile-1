@@ -106,10 +106,8 @@ class Main extends Sprite
 			fpsVar.visible = ClientPrefs.showFPS;
 		}
 
-		#if html5
 		FlxG.autoPause = false;
 		FlxG.mouse.visible = false;
-		#end
 
 		#if mobile
 		lime.system.System.allowScreenTimeout = ClientPrefs.screensaver;
