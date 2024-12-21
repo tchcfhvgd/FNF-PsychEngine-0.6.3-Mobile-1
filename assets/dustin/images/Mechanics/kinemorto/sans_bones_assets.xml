@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="sans_bones_assets.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bone0000" x="1" y="1" width="950" height="1124" frameX="0" frameY="-21" frameWidth="950" frameHeight="1157"/>
+	<SubTexture name="bone0001" x="1" y="1" width="950" height="1124" frameX="0" frameY="-21" frameWidth="950" frameHeight="1157"/>
+	<SubTexture name="bone0002" x="952" y="1" width="906" height="1157" frameX="-44" frameY="0" frameWidth="950" frameHeight="1157"/>
+	<SubTexture name="bone0003" x="952" y="1" width="906" height="1157" frameX="-44" frameY="0" frameWidth="950" frameHeight="1157"/>
+	<SubTexture name="bone0004" x="1859" y="1" width="914" height="1151" frameX="-36" frameY="-4" frameWidth="950" frameHeight="1157"/>
+	<SubTexture name="bone0005" x="1859" y="1" width="914" height="1151" frameX="-36" frameY="-4" frameWidth="950" frameHeight="1157"/>
+	<SubTexture name="bone0006" x="1859" y="1" width="914" height="1151" frameX="-36" frameY="-4" frameWidth="950" frameHeight="1157"/>
+	<SubTexture name="bone0007" x="1859" y="1" width="914" height="1151" frameX="-36" frameY="-4" frameWidth="950" frameHeight="1157"/>
+	<SubTexture name="bone0008" x="1859" y="1" width="914" height="1151" frameX="-36" frameY="-4" frameWidth="950" frameHeight="1157"/>
+	<SubTexture name="bone0009" x="2774" y="1" width="950" height="1133" frameX="0" frameY="-21" frameWidth="950" frameHeight="1166"/>
+	<SubTexture name="bone0010" x="2774" y="1" width="950" height="1133" frameX="0" frameY="-21" frameWidth="950" frameHeight="1166"/>
+	<SubTexture name="bone0011" x="1" y="1159" width="906" height="1166" frameX="-44" frameY="0" frameWidth="950" frameHeight="1166"/>
+	<SubTexture name="bone0012" x="1" y="1159" width="906" height="1166" frameX="-44" frameY="0" frameWidth="950" frameHeight="1166"/>
+	<SubTexture name="bone0013" x="908" y="1159" width="914" height="1160" frameX="-36" frameY="-4" frameWidth="950" frameHeight="1166"/>
+	<SubTexture name="bone0014" x="908" y="1159" width="914" height="1160" frameX="-36" frameY="-4" frameWidth="950" frameHeight="1166"/>
+	<SubTexture name="bone0015" x="908" y="1159" width="914" height="1160" frameX="-36" frameY="-4" frameWidth="950" frameHeight="1166"/>
+	<SubTexture name="bone0016" x="908" y="1159" width="914" height="1160" frameX="-36" frameY="-4" frameWidth="950" frameHeight="1166"/>
+	<SubTexture name="bone0017" x="908" y="1159" width="914" height="1160" frameX="-36" frameY="-4" frameWidth="950" frameHeight="1166"/>
+</TextureAtlas>
