@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bone_assets.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="bone appear0000" x="1" y="1" width="56" height="24" frameX="-8" frameY="-170" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone appear0001" x="58" y="1" width="59" height="172" frameX="-5" frameY="-137" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone appear0002" x="118" y="1" width="60" height="199" frameX="0" frameY="0" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone appear0003" x="179" y="1" width="60" height="190" frameX="0" frameY="-9" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone appear0004" x="240" y="1" width="60" height="188" frameX="-4" frameY="-10" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone appear0005" x="301" y="1" width="59" height="187" frameX="-1" frameY="-12" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone appear0006" x="361" y="1" width="60" height="192" frameX="-5" frameY="-6" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone appear0007" x="179" y="1" width="60" height="190" frameX="0" frameY="-9" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone appear0008" x="240" y="1" width="60" height="188" frameX="-4" frameY="-10" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone appear0009" x="301" y="1" width="59" height="187" frameX="-1" frameY="-12" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone dissapear0000" x="422" y="1" width="59" height="203" frameX="0" frameY="0" frameWidth="64" frameHeight="316"/>
+	<SubTexture name="bone dissapear0001" x="1" y="205" width="59" height="196" frameX="0" frameY="-3" frameWidth="64" frameHeight="316"/>
+	<SubTexture name="bone dissapear0002" x="58" y="1" width="59" height="172" frameX="-5" frameY="-144" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone dissapear0003" x="61" y="205" width="0" height="0" frameX="168" frameY="-138" frameWidth="64" frameHeight="316"/>
+	<SubTexture name="bone dissapear0004" x="61" y="205" width="0" height="0" frameX="168" frameY="-138" frameWidth="64" frameHeight="316"/>
+	<SubTexture name="bone dissapear0005" x="61" y="205" width="0" height="0" frameX="168" frameY="-138" frameWidth="64" frameHeight="316"/>
+	<SubTexture name="bone dissapear0006" x="61" y="205" width="0" height="0" frameX="168" frameY="-138" frameWidth="64" frameHeight="316"/>
+	<SubTexture name="bone dissapear0007" x="61" y="205" width="0" height="0" frameX="168" frameY="-138" frameWidth="64" frameHeight="316"/>
+	<SubTexture name="bone dissapear0008" x="61" y="205" width="0" height="0" frameX="168" frameY="-138" frameWidth="64" frameHeight="316"/>
+	<SubTexture name="bone dissapear0009" x="61" y="205" width="0" height="0" frameX="168" frameY="-138" frameWidth="64" frameHeight="316"/>
+	<SubTexture name="bone idle0000" x="179" y="1" width="60" height="190" frameX="0" frameY="-3" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone idle0001" x="240" y="1" width="60" height="188" frameX="-4" frameY="-4" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone idle0002" x="301" y="1" width="59" height="187" frameX="-1" frameY="-6" frameWidth="65" frameHeight="309"/>
+	<SubTexture name="bone idle0003" x="361" y="1" width="60" height="192" frameX="-5" frameY="0" frameWidth="65" frameHeight="309"/>
+</TextureAtlas>
