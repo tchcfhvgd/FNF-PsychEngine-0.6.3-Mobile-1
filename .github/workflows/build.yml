@@ -37,6 +37,7 @@ jobs:
           haxe-version: ${{ env.HAXE_VERSION }}
 
       - name: Restore Previous Cache
+        if: inputs.name == 'Android'
         id: cache-debug-build-android-restore
         uses: actions/cache/restore@main
         with:
@@ -70,6 +71,7 @@ jobs:
         run: haxelib run lime build ${{ inputs.buildArgs }}
 
       - name: Clear Previous Cache
+        if: inputs.name == 'Android'
         uses: actions/github-script@main
         with:
           script: |
@@ -95,6 +97,7 @@ jobs:
             	console.log(error.message);
             }
       - name: Save Current Cache
+        if: inputs.name == 'Android'
         id: cache-release-build-android-save
         uses: actions/cache/save@main
         with:
