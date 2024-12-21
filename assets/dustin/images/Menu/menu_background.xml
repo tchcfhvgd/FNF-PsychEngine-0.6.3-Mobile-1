@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="menu_background.png">
+	<!-- Created with Adobe Animate version 21.0.4.39603 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="menu_background0000" x="1" y="1" width="1030" height="2316" frameX="0" frameY="0" frameWidth="1030" frameHeight="2317"/>
+	<SubTexture name="menu_background0001" x="1" y="1" width="1030" height="2316" frameX="0" frameY="0" frameWidth="1030" frameHeight="2317"/>
+	<SubTexture name="menu_background0002" x="1" y="1" width="1030" height="2316" frameX="0" frameY="0" frameWidth="1030" frameHeight="2317"/>
+	<SubTexture name="menu_background0003" x="1032" y="1" width="1030" height="2317"/>
+	<SubTexture name="menu_background0004" x="1032" y="1" width="1030" height="2317"/>
+	<SubTexture name="menu_background0005" x="1032" y="1" width="1030" height="2317"/>
+</TextureAtlas>
