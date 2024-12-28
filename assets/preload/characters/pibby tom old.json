@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "idle",
+			"loop": true,
+			"name": "I"
+		},
+		{
+			"offsets": [
+				210,
+				80
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "L"
+		},
+		{
+			"offsets": [
+				50,
+				70
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "D"
+		},
+		{
+			"offsets": [
+				-70,
+				100
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singUP",
+			"loop": false,
+			"name": "U"
+		},
+		{
+			"offsets": [
+				-260,
+				50
+			],
+			"indices": [],
+			"fps": 14,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "R"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Pibby Tom OLD",
+	"position": [
+		180,
+		-80
+	],
+	"healthicon": "pibby-tom",
+	"flip_x": false,
+	"healthbar_colors": [
+		113,
+		134,
+		161
+	],
+	"camera_position": [
+		-750,
+		0
+	],
+	"sing_duration": 5,
+	"scale": 1.7
+}

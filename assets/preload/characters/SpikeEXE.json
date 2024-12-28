@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-20
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "R",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				-30
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				-32
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "L",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/SpikeEXE",
+	"position": [
+		300,
+		100
+	],
+	"healthicon": "SpikeEXE",
+	"flip_x": true,
+	"healthbar_colors": [
+		156,
+		140,
+		136
+	],
+	"camera_position": [
+		-300,
+		-100
+	],
+	"sing_duration": 6.1,
+	"scale": 1.7
+}

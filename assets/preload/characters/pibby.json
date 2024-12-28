@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "idle",
+			"loop": false,
+			"name": "pibby idle"
+		},
+		{
+			"offsets": [
+				263,
+				162
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "cry",
+			"loop": false,
+			"name": "pibby cry"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/pibby",
+	"position": [
+		1070,
+		280
+	],
+	"healthicon": "pibby",
+	"flip_x": false,
+	"healthbar_colors": [
+		120,
+		38,
+		102
+	],
+	"camera_position": [
+		-700,
+		0
+	],
+	"sing_duration": 6.99999999999999,
+	"scale": 1
+}

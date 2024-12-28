@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				20
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				6,
+				5
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-43,
+				15
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				20,
+				10
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "R",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Lightning OLD",
+	"position": [
+		-70,
+		180
+	],
+	"healthicon": "Lightning old",
+	"flip_x": false,
+	"healthbar_colors": [
+		201,
+		116,
+		45
+	],
+	"camera_position": [
+		-60,
+		-140
+	],
+	"sing_duration": 6.1,
+	"scale": 1.4
+}

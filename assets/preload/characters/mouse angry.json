@@ -1,0 +1,95 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 14,
+			"name": "I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-156,
+				-30
+			],
+			"anim": "singLEFT",
+			"fps": 16,
+			"name": "L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-204,
+				-28
+			],
+			"anim": "singDOWN",
+			"fps": 16,
+			"name": "D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-177,
+				-29
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-306,
+				-15
+			],
+			"anim": "singRIGHT",
+			"fps": 16,
+			"name": "R",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-28,
+				-195
+			],
+			"loop": false,
+			"fps": 18,
+			"anim": "attack",
+			"indices": [
+				3,
+				4,
+				5,
+				6,
+				7
+			],
+			"name": "A"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Basement Mouse PH2",
+	"position": [
+		-533,
+		-268
+	],
+	"healthicon": "mouse-p2",
+	"flip_x": false,
+	"healthbar_colors": [
+		160,
+		90,
+		23
+	],
+	"camera_position": [
+		20,
+		90
+	],
+	"sing_duration": 4.7,
+	"scale": 0.475
+}

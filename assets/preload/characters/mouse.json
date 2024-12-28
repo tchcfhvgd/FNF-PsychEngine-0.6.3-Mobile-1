@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-52,
+				0
+			],
+			"anim": "idle",
+			"fps": 16,
+			"name": "I",
+			"indices": []
+		},
+		{
+			"offsets": [
+				168,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "angry",
+			"indices": [],
+			"name": "A"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-8,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 16,
+			"name": "L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				1
+			],
+			"anim": "singDOWN",
+			"fps": 16,
+			"name": "D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				7,
+				7
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				11,
+				5
+			],
+			"anim": "singRIGHT",
+			"fps": 16,
+			"name": "R",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Basement Mouse PH1",
+	"position": [
+		-80,
+		220
+	],
+	"healthicon": "mouse-p1",
+	"flip_x": false,
+	"healthbar_colors": [
+		170,
+		95,
+		25
+	],
+	"camera_position": [
+		-150,
+		100
+	],
+	"sing_duration": 4.5,
+	"scale": 1
+}

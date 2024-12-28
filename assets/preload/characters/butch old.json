@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-95,
+				53
+			],
+			"indices": [],
+			"fps": 12,
+			"anim": "idle",
+			"loop": false,
+			"name": "I"
+		},
+		{
+			"offsets": [
+				-13,
+				92
+			],
+			"indices": [],
+			"fps": 13,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "R"
+		},
+		{
+			"offsets": [
+				30,
+				60
+			],
+			"indices": [],
+			"fps": 13,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "D"
+		},
+		{
+			"offsets": [
+				-70,
+				-35
+			],
+			"indices": [],
+			"fps": 13,
+			"anim": "singUP",
+			"loop": false,
+			"name": "U"
+		},
+		{
+			"offsets": [
+				-19,
+				37
+			],
+			"indices": [],
+			"fps": 13,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "L"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Butch Old",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "butch old",
+	"flip_x": false,
+	"healthbar_colors": [
+		67,
+		57,
+		49
+	],
+	"camera_position": [
+		200,
+		-150
+	],
+	"sing_duration": 4,
+	"scale": 1.3
+}

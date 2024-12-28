@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "MT idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				75
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "MT right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-41,
+				-41
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "MT down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				139,
+				197
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "MT up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				74,
+				-15
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "MT left",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mucho mouse judge",
+	"position": [
+		180,
+		320
+	],
+	"healthicon": "mouse-judge",
+	"flip_x": true,
+	"healthbar_colors": [
+		174,
+		100,
+		35
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.09999999999999,
+	"scale": 1.5
+}

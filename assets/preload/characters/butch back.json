@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 12,
+			"name": "I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				56,
+				-6
+			],
+			"anim": "singLEFT",
+			"fps": 12,
+			"name": "R",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				38,
+				-20
+			],
+			"anim": "singDOWN",
+			"fps": 12,
+			"name": "D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				190
+			],
+			"anim": "singUP",
+			"fps": 12,
+			"name": "U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				328,
+				-82
+			],
+			"anim": "singRIGHT",
+			"fps": 12,
+			"name": "L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				75,
+				-74
+			],
+			"anim": "singLEFTmiss",
+			"fps": 12,
+			"name": "missR",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				50,
+				120
+			],
+			"anim": "singDOWNmiss",
+			"fps": 12,
+			"name": "missD",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-32,
+				275
+			],
+			"anim": "singUPmiss",
+			"fps": 12,
+			"name": "missU",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				174,
+				-81
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 12,
+			"name": "missL",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Butch Back",
+	"position": [
+		-650,
+		-400
+	],
+	"healthicon": "butch",
+	"flip_x": false,
+	"healthbar_colors": [
+		54,
+		54,
+		54
+	],
+	"camera_position": [
+		-370,
+		450
+	],
+	"sing_duration": 4.00000000000001,
+	"scale": 0.4
+}

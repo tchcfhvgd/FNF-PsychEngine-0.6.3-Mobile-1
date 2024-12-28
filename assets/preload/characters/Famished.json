@@ -1,0 +1,111 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 16,
+			"name": "I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				60
+			],
+			"anim": "singLEFT",
+			"fps": 14,
+			"name": "L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				21,
+				40
+			],
+			"anim": "singDOWN",
+			"fps": 14,
+			"name": "D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-11,
+				85
+			],
+			"anim": "singUP",
+			"fps": 14,
+			"name": "U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-118,
+				31
+			],
+			"anim": "singRIGHT",
+			"fps": 14,
+			"name": "R",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				-4
+			],
+			"anim": "ani1",
+			"fps": 14,
+			"name": "A",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-4,
+				-7
+			],
+			"anim": "ani2",
+			"fps": 12,
+			"name": "B",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-12,
+				-4
+			],
+			"anim": "ani3",
+			"fps": 14,
+			"name": "C",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Famished",
+	"position": [
+		-150,
+		-600
+	],
+	"healthicon": "starved-butch",
+	"flip_x": false,
+	"healthbar_colors": [
+		116,
+		116,
+		116
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 0.45
+}

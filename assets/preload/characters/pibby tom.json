@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 14,
+			"name": "I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				10
+			],
+			"anim": "singLEFT",
+			"fps": 16,
+			"name": "L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-90,
+				-20
+			],
+			"anim": "singDOWN",
+			"fps": 16,
+			"name": "D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-110,
+				260
+			],
+			"anim": "singUP",
+			"fps": 16,
+			"name": "U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP-alt",
+			"fps": 16,
+			"name": "A",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-250,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 16,
+			"name": "R",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "laugh",
+			"fps": 16,
+			"name": "A",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Pibby Tom",
+	"position": [
+		-100,
+		50
+	],
+	"healthicon": "pibby-tom",
+	"flip_x": false,
+	"healthbar_colors": [
+		113,
+		134,
+		161
+	],
+	"camera_position": [
+		-300,
+		-150
+	],
+	"sing_duration": 5,
+	"scale": 1.7
+}

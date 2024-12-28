@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "idle",
+			"indices": [],
+			"name": "I"
+		},
+		{
+			"offsets": [
+				12,
+				8
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "R"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "D"
+		},
+		{
+			"offsets": [
+				3,
+				-3
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singUP",
+			"indices": [],
+			"name": "U"
+		},
+		{
+			"offsets": [
+				-7,
+				2
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "L"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mucho mouse",
+	"position": [
+		-220,
+		-250
+	],
+	"healthicon": "mucho-mouse",
+	"flip_x": true,
+	"healthbar_colors": [
+		174,
+		100,
+		35
+	],
+	"camera_position": [
+		150,
+		150
+	],
+	"sing_duration": 6.1,
+	"scale": 0.899999999999999
+}

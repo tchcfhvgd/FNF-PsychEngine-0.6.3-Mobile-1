@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "idle",
+			"indices": [],
+			"name": "I"
+		},
+		{
+			"offsets": [
+				176,
+				95
+			],
+			"loop": true,
+			"fps": 14,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "L"
+		},
+		{
+			"offsets": [
+				44,
+				-39
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "D"
+		},
+		{
+			"offsets": [
+				69,
+				115
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singUP",
+			"indices": [],
+			"name": "U"
+		},
+		{
+			"offsets": [
+				-75,
+				-24
+			],
+			"loop": false,
+			"fps": 14,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "R"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/James",
+	"position": [
+		-40,
+		40
+	],
+	"healthicon": "james",
+	"flip_x": false,
+	"healthbar_colors": [
+		159,
+		92,
+		22
+	],
+	"camera_position": [
+		150,
+		250
+	],
+	"sing_duration": 6.1,
+	"scale": 0.55
+}

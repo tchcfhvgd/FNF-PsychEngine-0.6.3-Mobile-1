@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 22,
+			"anim": "idle",
+			"loop": true,
+			"name": "I"
+		},
+		{
+			"offsets": [
+				280,
+				-10
+			],
+			"indices": [],
+			"fps": 22,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "L"
+		},
+		{
+			"offsets": [
+				30,
+				0
+			],
+			"indices": [],
+			"fps": 22,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "D"
+		},
+		{
+			"offsets": [
+				110,
+				20
+			],
+			"indices": [],
+			"fps": 22,
+			"anim": "singUP",
+			"loop": false,
+			"name": "U"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 22,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "R"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/DOJ jerry",
+	"position": [
+		40,
+		190
+	],
+	"healthicon": "DOI-Jerry",
+	"flip_x": false,
+	"healthbar_colors": [
+		223,
+		100,
+		85
+	],
+	"camera_position": [
+		-220,
+		-40
+	],
+	"sing_duration": 4,
+	"scale": 1.2
+}

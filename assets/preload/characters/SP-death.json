@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "deathLoop",
+			"fps": 10,
+			"name": "B",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "deathConfirm",
+			"fps": 10,
+			"name": "C",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "firstDeath",
+			"fps": 10,
+			"name": "A",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/SkidPump-death",
+	"position": [
+		-600,
+		-150
+	],
+	"healthicon": "spooky",
+	"flip_x": true,
+	"healthbar_colors": [
+		213,
+		126,
+		0
+	],
+	"camera_position": [
+		-400,
+		250
+	],
+	"sing_duration": 4,
+	"scale": 0.7
+}

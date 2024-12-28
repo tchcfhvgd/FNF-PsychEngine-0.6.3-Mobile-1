@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 14,
+			"name": "I",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				141,
+				49
+			],
+			"anim": "singLEFT",
+			"fps": 14,
+			"name": "L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-17,
+				103
+			],
+			"anim": "singDOWN",
+			"fps": 14,
+			"name": "D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				9,
+				132
+			],
+			"anim": "singUP",
+			"fps": 14,
+			"name": "U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				24,
+				-44
+			],
+			"anim": "singRIGHT",
+			"fps": 14,
+			"name": "R",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Madness Tom OLD",
+	"position": [
+		-170,
+		20
+	],
+	"healthicon": "mc-tom",
+	"flip_x": false,
+	"healthbar_colors": [
+		153,
+		140,
+		140
+	],
+	"camera_position": [
+		150,
+		300
+	],
+	"sing_duration": 3,
+	"scale": 0.6
+}

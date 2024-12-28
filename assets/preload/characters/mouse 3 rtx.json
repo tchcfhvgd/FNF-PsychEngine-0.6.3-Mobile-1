@@ -1,0 +1,99 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-152,
+				207
+			],
+			"loop": true,
+			"fps": 10,
+			"anim": "idle",
+			"indices": [],
+			"name": "I"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-29,
+				231
+			],
+			"anim": "singLEFT",
+			"fps": 18,
+			"name": "L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-110,
+				229
+			],
+			"anim": "singDOWN",
+			"fps": 18,
+			"name": "D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-116,
+				234
+			],
+			"anim": "singUP",
+			"fps": 18,
+			"name": "U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-143,
+				225
+			],
+			"anim": "singRIGHT",
+			"fps": 18,
+			"name": "R",
+			"indices": []
+		},
+		{			"loop": false,
+			"offsets": [
+				-143,
+				190
+			],
+			"anim": "hey",
+			"fps": 16,
+			"name": "A",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-143,
+				190
+			],
+			"anim": "attack",
+			"fps": 16,
+			"name": "B",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Basement Mouse PH3 RTX",
+	"position": [
+		-320,
+		-190
+	],
+	"healthicon": "mouse-p3",
+	"flip_x": false,
+	"healthbar_colors": [
+		170,
+		95,
+		27
+	],
+	"camera_position": [
+		240,
+		190
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}
