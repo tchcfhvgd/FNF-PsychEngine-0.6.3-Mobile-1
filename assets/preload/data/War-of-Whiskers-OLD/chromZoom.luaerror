@@ -1,0 +1,70 @@
+local chromFreq = 4 --default = 2
+local chromAmount = 0.3 --default = 0.65
+local enabled = false
+local activated = false
+function onCreate()
+    enabledShader = getPropertyFromClass('ClientPrefs','shaders')
+end
+function onCreatePost()
+    
+        initLuaShader('ChromaticAbberationHUD')
+
+        makeLuaSprite('chromToggle',-100,0)
+        setProperty('chromToggle.flipX',true)
+        
+        makeLuaSprite('chromGraphic','',-100,0)
+        makeGraphic("chromGraphic", screenWidth+ 100, screenHeight)
+        setProperty('chromGraphic.flipX',true)
+        
+        setSpriteShader("chromGraphic", 'chromToggle')
+
+        makeLuaSprite('chromX',nil,0,0)
+    end
+
+function onUpdate()
+    if enabled then
+        local chromValue = getProperty('chromX.x')
+        setShaderFloat('chromToggle', "amount", chromValue)
+        if chromAmount == 0 and chromValue == 0 then
+            enabled = false
+        end
+    end
+end
+function onBeatHit()
+    if activated and curBeat % chromFreq == 0 then
+    chromToggle()
+        chromBeat()
+    end
+end
+
+function onEvent(name,v1,v2)
+if name =='Add Camera Zoom' then
+chromBeat()
+end
+end
+
+function onTweenCompleted(tag)
+    if tag == 'chromLol' then
+        setProperty('chromX.x',0)
+        runHaxeCode([[
+game.getLuaObject("glitchToggle").removeShader();
+]])
+    end
+end
+
+function chromBeat()
+    setProperty('chromX.x',chromAmount)
+    doTweenX('chromLol','chromX',0,0.35,'linear')
+    enabled = true
+end
+function chromToggle()
+    runHaxeCode([[
+            var chromToggle = game.createRuntimeShader('ChromaticAbberationHUD');
+            var chromGraphic = new ShaderFilter(chromToggle);
+            game.getLuaObject('glitchToggle').shader = glitchToggle;
+
+            return;
+        ]]
+    )
+    activated = true
+end
