@@ -1,22 +1,50 @@
 {
-	"songs": [
-		["Spookeez", "spooky", [34, 51, 68]],
-		["South", "spooky", [34, 51, 68]],
-		["Monster", "monster", [34, 51, 68]]
-	],
-
-	"weekCharacters": [
-		"spooky",
-		"bf",
-		"gf"
-	],
-	"weekBackground": "halloween",
-
-	"storyName": "Spooky Month",
+	"storyName": "Love is Hopeless",
+	"difficulties": "hard",
+	"hideFreeplay": true,
+	"weekBackground": "tom",
 	"weekBefore": "week1",
-	"weekName": "Week 2",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
 	"startUnlocked": true,
-
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"songs": [
+		[
+			"Blue",
+			"blue-tom",
+			[
+				96,
+				102,
+				127
+			]
+		],
+		[
+			"Tragical Comedy",
+			"blue-tom",
+			[
+				76,
+				82,
+				107
+			]
+		],
+		[
+			"Shattered",
+			"blue-tom2",
+			[
+				56,
+				62,
+				87
+			]
+		]
+	],
+	"weekCharacters": [
+		"Depressive Tom",
+		"BF",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Week 2 - Love is Hopeless"
 }

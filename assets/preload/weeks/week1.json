@@ -1,22 +1,50 @@
 {
-	"songs": [
-		["Bopeebo", "dad", [146, 113, 253]],
-		["Fresh", "dad", [146, 113, 253]],
-		["Dad Battle", "dad", [146, 113, 253]]
+	"storyName": "Secret of Nobody",
+	"difficulties": "hard",
+	"hideFreeplay": true,
+	"weekBackground": "house",
+	"freeplayColor": [
+		146,
+		113,
+		253
 	],
-
-	"weekCharacters": [
-		"dad",
-		"bf",
-		"gf"
-	],
-	"weekBackground": "stage",
-
-	"storyName": "Daddy Dearest",
 	"weekBefore": "tutorial",
-	"weekName": "Week 1",
 	"startUnlocked": true,
-
+	"weekCharacters": [
+		"Basement Mouse",
+		"BF",
+		""
+	],
+	"songs": [
+		[
+			"House for Sale",
+			"mouse-p1",
+			[
+				210,
+				135,
+				65
+			]
+		],
+		[
+			"Evaporate",
+			"mouse-p2",
+			[
+				160,
+				90,
+				23
+			]
+		],
+		[
+			"Sirokou",
+			"mouse-p2.5",
+			[
+				255,
+				70,
+				23
+			]
+		]
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekName": "Week 1 - Secret of Nobody",
+	"hiddenUntilUnlocked": false
 }

@@ -1,22 +1,50 @@
 {
-	"songs": [
-		["Satin Panties", "mom", [252, 150, 215]],
-		["High", "mom", [252, 150, 215]],
-		["Milf", "mom", [252, 150, 215]]
+	"storyName": "Bloody Waltz",
+	"difficulties": "hard",
+	"hideFreeplay": true,
+	"weekBackground": "45wb",
+	"freeplayColor": [
+		146,
+		113,
+		253
 	],
-	
-	"weekCharacters": [
-		"mom",
-		"bf",
-		"gf"
-	],
-	"weekBackground": "limo",
-
-	"storyName": "MOMMY MUST MURDER",
-	"weekBefore": "week3",
-	"weekName": "Week 4",
+	"weekBefore": "tutorial",
 	"startUnlocked": true,
-
+	"weekCharacters": [
+		"WB45",
+		"BF",
+		""
+	],
+	"songs": [
+		[
+			"Blood'NCartoon",
+			"wb-tom",
+			[
+				123,
+				108,
+				102
+			]
+		],
+		[
+			"Splatter",
+			"wb45",
+			[
+				95,
+				90,
+				91
+			]
+		],
+		[
+			"Chainsaw Maniac",
+			"45-tom",
+			[
+				54,
+				70,
+				69
+			]
+		]
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"weekName": "Week 4 - Bloody Waltz",
+	"hiddenUntilUnlocked": false
 }
