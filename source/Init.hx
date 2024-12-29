@@ -16,7 +16,7 @@ class Init extends FlxState
 	{
 	    #if VIDEOS_ALLOWED
 
-		var filepath:String = Paths.video(name);
+		var filepath:String = Paths.video("BasementIntro");
 		#if sys
 		if(!FileSystem.exists(filepath))
 		#else
