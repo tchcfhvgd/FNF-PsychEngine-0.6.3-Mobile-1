@@ -15,7 +15,7 @@ jobs:
       matrix:
         include:
           - name: Android
-            os: ubuntu-22.04
+            os: ubuntu-24.04
             buildArgs: "android -final -D officialBuild"
             artifactName: androidBuild
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
@@ -34,7 +34,7 @@ jobs:
 
   Releaser:
     needs: [build]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions: write-all
     steps:
       - name: Download Android Build
