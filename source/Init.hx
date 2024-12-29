@@ -5,6 +5,9 @@ import flixel.FlxG;
 import flixel.input.keyboard.FlxKey;
 import flixel.addons.transition.FlxTransitionableState;
 import lime.app.Application;
+#if sys
+import sys.FileSystem;
+#end
 #if hxvlc
 import hxvlc.flixel.*;
 import hxvlc.util.*;
