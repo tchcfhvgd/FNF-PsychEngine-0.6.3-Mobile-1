@@ -26,7 +26,7 @@ class Init extends FlxState
 		if(!OpenFlAssets.exists(filepath))
 		#end
 		{
-			FlxG.log.warn('Couldnt find video file: ' + name);
+			FlxG.log.warn('Couldnt find video file: ' + 'BasementIntro');
 			startAndEnd();
 			return;
 		}
