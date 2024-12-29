@@ -43,9 +43,9 @@ class Init extends FlxState
 		startAndEnd();
 		return;
 		#end
-	}
-	    
+	
 	    super.create();
+	}
 }
 
     function startAndEnd()
