@@ -15,8 +15,47 @@ import hxvlc.util.*;
 
 class Init extends FlxState
 {
+	public static var muteKeys:Array<FlxKey> = [FlxKey.ZERO];
+	public static var volumeDownKeys:Array<FlxKey> = [FlxKey.NUMPADMINUS, FlxKey.MINUS];
+	public static var volumeUpKeys:Array<FlxKey> = [FlxKey.NUMPADPLUS, FlxKey.PLUS];
 	override public function create():Void
 	{
+	    Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
+
+		#if LUA_ALLOWED
+		Paths.pushGlobalMods();
+		#end
+		// Just to load a mod on start up if ya got one. For mods that change the menu music and bg
+		WeekData.loadTheFirstEnabledMod();
+		
+		FlxG.game.focusLostFramerate = 60;
+		FlxG.sound.muteKeys = muteKeys;
+		FlxG.sound.volumeDownKeys = volumeDownKeys;
+		FlxG.sound.volumeUpKeys = volumeUpKeys;
+		FlxG.keys.preventDefaultKeys = [TAB];
+
+		PlayerSettings.init();
+		
+		Highscore.load();
+		
+		if(FlxG.save.data != null && FlxG.save.data.fullscreen)
+			{
+				FlxG.fullscreen = FlxG.save.data.fullscreen;
+				//trace('LOADED FULLSCREEN SETTING!!');
+			}
+			persistentUpdate = true;
+			persistentDraw = true;
+			mobile.MobileData.init();
+
+		if (FlxG.save.data.weekCompleted != null)
+		{
+			StoryMenuState.weekCompleted = FlxG.save.data.weekCompleted;
+		}
+		
+		FlxG.mouse.visible = false;
+		ClientPrefs.loadPrefs();
+	    
 	    #if VIDEOS_ALLOWED
 
 		var filepath:String = Paths.video("BasementIntro");
