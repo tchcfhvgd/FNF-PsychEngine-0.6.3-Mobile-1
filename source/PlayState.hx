@@ -72,7 +72,10 @@ import sys.io.File;
 #end
 
 #if VIDEOS_ALLOWED
-import vlc.MP4Handler;
+#if hxvlc
+import hxvlc.flixel.*;
+import hxvlc.util.*;
+#end
 #end
 
 import mobile.TouchButton;
@@ -1619,7 +1622,7 @@ class PlayState extends MusicBeatState
 		char.y += char.positionArray[1];
 	}
 
-	public function startVideo(name:String)
+    public function startVideo(name:String)
 	{
 		#if VIDEOS_ALLOWED
 		inCutscene = true;
@@ -1636,13 +1639,16 @@ class PlayState extends MusicBeatState
 			return;
 		}
 
-		var video:MP4Handler = new MP4Handler();
-		video.playVideo(filepath);
-		video.finishCallback = function()
+		var video:FlxVideo = new FlxVideo();
+		video.load(filepath);
+		video.play();
+		video.onEndReached.add(function()
 		{
+			video.dispose();
 			startAndEnd();
 			return;
-		}
+		}, true);
+
 		#else
 		FlxG.log.warn('Platform not supported!');
 		startAndEnd();
