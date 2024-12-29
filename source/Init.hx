@@ -61,8 +61,7 @@ class Init extends FlxState
 		#end
 		{
 			FlxG.log.warn('Couldnt find video file: ' + 'BasementIntro');
-			startAndEnd();
-			return;
+			MusicBeatState.switchState(new TitleState());
 		}
 
 		var video:FlxVideo = new FlxVideo();
@@ -71,23 +70,16 @@ class Init extends FlxState
 		video.onEndReached.add(function()
 		{
 			video.dispose();
-			startAndEnd();
-			return;
+			MusicBeatState.switchState(new TitleState());
 		}, true);
 
 		#else
 		FlxG.log.warn('Platform not supported!');
-		startAndEnd();
-		return;
+		MusicBeatState.switchState(new TitleState());
 		#end
 	
-	    super.create();
+	        super.create();
 	}
 }
-
-    function startAndEnd()
-	{
-		 MusicBeatState.switchState(new TitleState());
-	}
 
 
