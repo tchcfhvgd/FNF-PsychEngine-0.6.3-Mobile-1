@@ -61,6 +61,8 @@ class Init extends FlxState
 		#end
 		{
 			FlxG.log.warn('Couldnt find video file: ' + 'BasementIntro');
+			FlxTransitionableState.skipNextTransIn = true;
+			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new TitleState());
 		}
 
@@ -70,11 +72,15 @@ class Init extends FlxState
 		video.onEndReached.add(function()
 		{
 			video.dispose();
+			FlxTransitionableState.skipNextTransIn = true;
+			FlxTransitionableState.skipNextTransOut = true;
 			MusicBeatState.switchState(new TitleState());
 		}, true);
 
 		#else
 		FlxG.log.warn('Platform not supported!');
+		FlxTransitionableState.skipNextTransIn = true;
+		FlxTransitionableState.skipNextTransOut = true;
 		MusicBeatState.switchState(new TitleState());
 		#end
 	
