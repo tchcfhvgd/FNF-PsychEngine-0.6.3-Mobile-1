@@ -53,6 +53,10 @@ typedef TitleData =
 }
 class TitleState extends MusicBeatState
 {
+	public static var muteKeys:Array<FlxKey> = [FlxKey.ZERO];
+	public static var volumeDownKeys:Array<FlxKey> = [FlxKey.NUMPADMINUS, FlxKey.MINUS];
+	public static var volumeUpKeys:Array<FlxKey> = [FlxKey.NUMPADPLUS, FlxKey.PLUS];
+	
 	public static var initialized:Bool = false;
 
 	var blackScreen:FlxSprite;
@@ -84,6 +88,10 @@ class TitleState extends MusicBeatState
 
 	override public function create():Void
 	{
+		FlxG.sound.muteKeys = muteKeys;
+		FlxG.sound.volumeDownKeys = volumeDownKeys;
+		FlxG.sound.volumeUpKeys = volumeUpKeys;
+		
 		curWacky = FlxG.random.getObject(getIntroTextShit());
 
 		// DEBUG BULLSHIT
