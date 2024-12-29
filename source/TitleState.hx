@@ -390,21 +390,6 @@ class TitleState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (qqqeb.scale.x < 0.9) {
-            qqqeb.scale.x += 0.0032;
-        } else {
-            qqqeb.scale.x = 0.8;
-        }
-        
-        if (qqqeb.scale.y < 0.9)
-        {
-            qqqeb.scale.y += 0.0032;
-        }
-        else
-        {
-            qqqeb.scale.y = 0.8;
-	}
-		
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
 		// FlxG.watch.addQuick('amp', FlxG.sound.music.amplitude);
