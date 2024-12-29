@@ -4,7 +4,8 @@ import flixel.FlxState;
 import flixel.FlxG;
 import flixel.input.keyboard.FlxKey;
 import flixel.addons.transition.FlxTransitionableState;
-import lime.app.Application;
+import lime.app.Application
+	import openfl.utils.Assets as OpenFlAssets;;
 #if sys
 import sys.FileSystem;
 #end
