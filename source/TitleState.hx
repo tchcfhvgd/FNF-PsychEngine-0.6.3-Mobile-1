@@ -325,9 +325,7 @@ class TitleState extends MusicBeatState
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
 		// add(logo);
 
-		qqqeb = new FlxSprite(0, 370).loadGraphic(Paths.image("titlescreen/TBSLogoBlank"));
-	        qqqeb.scale.x = 0.8;
-	        qqqeb.scale.y = 0.8;
+		qqqeb = new FlxSprite(0, 300).loadGraphic(Paths.image("titlescreen/TBSLogoBlank"));
 		qqqeb.updateHitbox();
 	        qqqeb.screenCenter(X);
 	        add(qqqeb);
@@ -568,6 +566,8 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
+		logoBump();
+
 		if(logoBl != null)
 			logoBl.animation.play('bump', true);
 
@@ -718,6 +718,15 @@ class TitleState extends MusicBeatState
 				#end
 			}
 			skippedIntro = true;
+		}
+	}
+	function logoBump()
+	{
+		if (qqqeb != null)
+		{
+			qqqeb.scale.set(0.9, 0.9);
+			FlxTween.cancelTweensOf(qqqeb);
+			FlxTween.tween(qqqeb, {"scale.x": 0.8, "scale.y": 0.8}, 0.28, {});
 		}
 	}
 }
