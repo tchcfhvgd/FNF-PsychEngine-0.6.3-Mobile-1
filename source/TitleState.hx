@@ -325,7 +325,7 @@ class TitleState extends MusicBeatState
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
 		// add(logo);
 
-		qqqeb = new FlxSprite(0, 300).loadGraphic(Paths.image("titlescreen/TBSLogoBlank"));
+		qqqeb = new FlxSprite(0, 350).loadGraphic(Paths.image("titlescreen/TBSLogoBlank"));
 		qqqeb.updateHitbox();
 	        qqqeb.screenCenter(X);
 	        add(qqqeb);
@@ -724,9 +724,9 @@ class TitleState extends MusicBeatState
 	{
 		if (qqqeb != null)
 		{
-			qqqeb.scale.set(0.9, 0.9);
+			qqqeb.scale.set(1.1, 1.1);
 			FlxTween.cancelTweensOf(qqqeb);
-			FlxTween.tween(qqqeb, {"scale.x": 0.8, "scale.y": 0.8}, 0.28, {});
+			FlxTween.tween(qqqeb, {"scale.x": 1, "scale.y": 1}, 0.28, {});
 		}
 	}
 }
