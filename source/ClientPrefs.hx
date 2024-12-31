@@ -67,7 +67,7 @@ class ClientPrefs {
 		'opponentplay' => false
 	];
 
-	public static var comboOffset:Array<Int> = [150, -300, 150, -300];
+	public static var comboOffset:Array<Int> = [100, -300, 100, -300];
 	public static var ratingOffset:Int = 0;
 	public static var sickWindow:Int = 45;
 	public static var goodWindow:Int = 90;
