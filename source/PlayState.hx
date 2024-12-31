@@ -1162,7 +1162,7 @@ class PlayState extends MusicBeatState
 		healthBarBG.sprTracker = healthBar;
 		
 		healthbarHQ = new AttachedSprite('healthbarHQ');
-		healthbarHQ.y = healthBarBG.y - 570;
+		healthbarHQ.y = healthBarBG.y - 550;
 		healthbarHQ.screenCenter(X);
 		healthbarHQ.scrollFactor.set();
 		healthbarHQ.scale.set(0.42, 0.42);
@@ -5402,8 +5402,8 @@ class PlayState extends MusicBeatState
 
 			// Rating FC
 			ratingFC = "";
-			if (sicks > 0) ratingFC = "SFC";
-			if (goods > 0) ratingFC = "GFC";
+			if (sicks > 0) ratingFC = "WFC";
+			if (goods > 0) ratingFC = "OFC";
 			if (bads > 0 || shits > 0) ratingFC = "FC";
 			if (songMisses > 0 && songMisses < 10) ratingFC = "SDCB";
 			else if (songMisses >= 10) ratingFC = "Clear";
