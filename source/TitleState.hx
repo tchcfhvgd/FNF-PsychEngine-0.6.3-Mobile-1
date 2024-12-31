@@ -592,7 +592,7 @@ class TitleState extends MusicBeatState
 				case 3:
 					addMoreText('The Basement Team', 15);
 				case 4:
-					addMoreText('Geez So Many People', 20);
+					addMoreText('Geez So Many People', 25);
 				case 5:
 					deleteCoolText();
 				// credTextShit.visible = false;
@@ -615,7 +615,7 @@ class TitleState extends MusicBeatState
 					createCoolText([curWacky[0]]);
 				// credTextShit.visible = true;
 				case 12:
-					addMoreText(curWacky[1], 5);
+					addMoreText(curWacky[1], 10);
 				// credTextShit.text += '\nlmao';
 				case 13:
 					deleteCoolText();
@@ -626,10 +626,10 @@ class TitleState extends MusicBeatState
 					addMoreText('The');
 				// credTextShit.visible = true;
 				case 15:
-					addMoreText('Basement', 5);
+					addMoreText('Basement', 10);
 				// credTextShit.text += '\nNight';
 				case 16:
-					addMoreText('Show', 5); // credTextShit.text += '\nFunkin';
+					addMoreText('Show', 20); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();
