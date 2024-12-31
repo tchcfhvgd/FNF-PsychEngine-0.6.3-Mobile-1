@@ -1162,10 +1162,10 @@ class PlayState extends MusicBeatState
 		healthBarBG.sprTracker = healthBar;
 		
 		healthbarHQ = new AttachedSprite('healthbarHQ');
-		healthbarHQ.y = healthBarBG.y + 300;
+		healthbarHQ.y = healthBarBG.y - 800;
 		healthbarHQ.screenCenter(X);
 		healthbarHQ.scrollFactor.set();
-		healthbarHQ.scale.set(0.5, 0.5);
+		healthbarHQ.scale.set(0.2, 0.2);
 		healthbarHQ.visible = !ClientPrefs.hideHud;
 		add(healthbarHQ);
 
