@@ -592,7 +592,7 @@ class TitleState extends MusicBeatState
 				case 3:
 					addMoreText('The Basement Team', 15);
 				case 4:
-					addMoreText('Geez So Many People', 35);
+					addMoreText('Geez So Many People', 30);
 				case 5:
 					deleteCoolText();
 				// credTextShit.visible = false;
@@ -601,7 +601,7 @@ class TitleState extends MusicBeatState
 				case 6:
 					createCoolText(['Not associated', 'with'], -40);
 				case 8:
-					addMoreText('Warner Bros', -30);
+					addMoreText('Warner Bros', -15);
 					ngSpr.visible = true;
 				// credTextShit.text += '\nNewgrounds';
 				case 9:
@@ -615,7 +615,7 @@ class TitleState extends MusicBeatState
 					createCoolText([curWacky[0]]);
 				// credTextShit.visible = true;
 				case 12:
-					addMoreText(curWacky[1], 20);
+					addMoreText(curWacky[1], 15);
 				// credTextShit.text += '\nlmao';
 				case 13:
 					deleteCoolText();
@@ -626,10 +626,10 @@ class TitleState extends MusicBeatState
 					addMoreText('The');
 				// credTextShit.visible = true;
 				case 15:
-					addMoreText('Basement', 20);
+					addMoreText('Basement', 15);
 				// credTextShit.text += '\nNight';
 				case 16:
-					addMoreText('Show', 40); // credTextShit.text += '\nFunkin';
+					addMoreText('Show', 30); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();
@@ -724,9 +724,9 @@ class TitleState extends MusicBeatState
 	{
 		if (qqqeb != null)
 		{
-			qqqeb.scale.set(1.1, 1.1);
+			qqqeb.scale.set(0.9, 0.9);
 			FlxTween.cancelTweensOf(qqqeb);
-			FlxTween.tween(qqqeb, {"scale.x": 1, "scale.y": 1}, 0.28, {});
+			FlxTween.tween(qqqeb, {"scale.x": 0.8, "scale.y": 0.8}, 0.28, {});
 		}
 	}
 }
