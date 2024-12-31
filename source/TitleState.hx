@@ -325,7 +325,7 @@ class TitleState extends MusicBeatState
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
 		// add(logo);
 
-		qqqeb = new FlxSprite(0, 400).loadGraphic(Paths.image("titlescreen/TBSLogoBlank"));
+		qqqeb = new FlxSprite(0, 370).loadGraphic(Paths.image("titlescreen/TBSLogoBlank"));
 	        qqqeb.scale.x = 0.8;
 	        qqqeb.scale.y = 0.8;
 		qqqeb.updateHitbox();
