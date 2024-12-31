@@ -325,7 +325,7 @@ class TitleState extends MusicBeatState
 		logo.antialiasing = ClientPrefs.globalAntialiasing;
 		// add(logo);
 
-		qqqeb = new FlxSprite(0, 300).loadGraphic(Paths.image("titlescreen/TBSLogoBlank"));
+		qqqeb = new FlxSprite(0, 400).loadGraphic(Paths.image("titlescreen/TBSLogoBlank"));
 	        qqqeb.scale.x = 0.8;
 	        qqqeb.scale.y = 0.8;
 		qqqeb.updateHitbox();
@@ -592,20 +592,16 @@ class TitleState extends MusicBeatState
 				case 3:
 					addMoreText('The Basement Team', 15);
 				case 4:
-					addMoreText('Geez So Many People', 15);
+					addMoreText('Geez So Many People', 20);
 				case 5:
 					deleteCoolText();
 				// credTextShit.visible = false;
 				// credTextShit.text = 'In association \nwith';
 				// credTextShit.screenCenter();
 				case 6:
-					#if PSYCH_WATERMARKS
 					createCoolText(['Not associated', 'with'], -40);
-					#else
-					createCoolText(['In association', 'with'], -40);
-					#end
 				case 8:
-					addMoreText('Warner Bros', -40);
+					addMoreText('Warner Bros', -20);
 					ngSpr.visible = true;
 				// credTextShit.text += '\nNewgrounds';
 				case 9:
@@ -619,7 +615,7 @@ class TitleState extends MusicBeatState
 					createCoolText([curWacky[0]]);
 				// credTextShit.visible = true;
 				case 12:
-					addMoreText(curWacky[1]);
+					addMoreText(curWacky[1], 5);
 				// credTextShit.text += '\nlmao';
 				case 13:
 					deleteCoolText();
@@ -630,10 +626,10 @@ class TitleState extends MusicBeatState
 					addMoreText('The');
 				// credTextShit.visible = true;
 				case 15:
-					addMoreText('Basement');
+					addMoreText('Basement', 5);
 				// credTextShit.text += '\nNight';
 				case 16:
-					addMoreText('Show'); // credTextShit.text += '\nFunkin';
+					addMoreText('Show', 5); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();
