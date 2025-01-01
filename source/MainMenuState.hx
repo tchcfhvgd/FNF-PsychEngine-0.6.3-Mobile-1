@@ -40,6 +40,11 @@ class MainMenuState extends MusicBeatState
 	];
 
 	var magenta:FlxSprite;
+	var char1:FlxSprite;
+	var char2:FlxSprite;
+	var char3:FlxSprite;
+	var char4:FlxSprite;
+	var logo:FlxSprite;
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
@@ -94,12 +99,50 @@ class MainMenuState extends MusicBeatState
 		magenta.color = 0xFFfd719b;
 		//add(magenta);
 		
+		var qqqeb:Float = 1;
+		
+		char1 = new FlxSprite(700, 30).loadGraphic(Paths.image('mainmenuchar/storymode'));
+		char1.scale.x = qqqeb;
+		char1.scale.y = qqqeb;
+		char1.updateHitbox();
+		char1.visible = false;
+		char1.antialiasing = ClientPrefs.globalAntialiasing;
+		add(char1);
+
+		char2 = new FlxSprite(730, 200).loadGraphic(Paths.image('mainmenuchar/freeplay'));
+		char2.scale.x = qqqeb;
+		char2.scale.y = qqqeb;
+		char2.updateHitbox();
+		char2.visible = false;
+		char2.antialiasing = ClientPrefs.globalAntialiasing;
+		add(char2);
+
+		char3 = new FlxSprite(645, 140).loadGraphic(Paths.image('mainmenuchar/credits'));
+		char3.scale.x = qqqeb;
+		char3.scale.y = qqqeb;
+		char3.updateHitbox();
+		char3.visible = false;
+		char3.antialiasing = ClientPrefs.globalAntialiasing;
+		add(char3);
+
+		char4 = new FlxSprite(660, 260).loadGraphic(Paths.image('mainmenuchar/options'));
+		char4.scale.x = qqqeb;
+		char4.scale.y = qqqeb;
+		char4.updateHitbox();
+		char4.visible = false;
+		char4.antialiasing = ClientPrefs.globalAntialiasing;
+		add(char4);
+		
+		logo = new FlxSprite(720, -220).loadGraphic(Paths.image('titlescreen/TBSLogo'));
+	logo.updateHitbox();
+	add(logo);
+		
 		// magenta.scrollFactor.set();
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
-		var scale:Float = 0.625;
+		var scale:Float = 0.63;
 		/*if(optionShit.length > 6) {
 			scale = 6 / optionShit.length;
 		}*/
@@ -107,7 +150,7 @@ class MainMenuState extends MusicBeatState
 		for (i in 0...optionShit.length)
 		{
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(50, (i * 140)  + offset);
+			var menuItem:FlxSprite = new FlxSprite(30, (i * 140)  + offset);
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.frames = Paths.getSparrowAtlas('mainmenu/menu_' + optionShit[i]);
@@ -188,6 +231,42 @@ class MainMenuState extends MusicBeatState
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
+		if (optionShit[curSelected] == 'story_mode')
+		{
+			char1.visible = true;
+		}
+		else
+		{
+            char1.visible = false;
+		}
+
+                if (optionShit[curSelected] == 'freeplay')
+		{
+			char2.visible = true;
+		}
+		else
+		{
+            char2.visible = false;
+		}
+
+		if (optionShit[curSelected] == 'credits')
+		{
+			char3.visible = true;
+		}
+		else
+		{
+            char3.visible = false;
+		}
+
+		if (optionShit[curSelected] == 'options')
+		{
+			char4.visible = true;
+		}
+		else
+		{
+            char4.visible = false;
+		}
+		
 		if (!selectedSomethin)
 		{
 			if (controls.UI_UP_P)
@@ -297,5 +376,22 @@ class MainMenuState extends MusicBeatState
 				spr.centerOffsets();
 			}
 		});
+	}
+	
+	override function beatHit()
+	{
+		super.beatHit();
+		
+		logoBump();
+	}
+	
+	function logoBump()
+	{
+		if (logo != null)
+		{
+			logo.scale.set(0.45, 0.45);
+			FlxTween.cancelTweensOf(logo);
+			FlxTween.tween(logo, {"scale.x": 0.4, "scale.y": 0.4}, 0.28, {});
+		}
 	}
 }
