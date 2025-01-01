@@ -46,6 +46,7 @@ class MainMenuState extends MusicBeatState
 	var char3:FlxSprite;
 	var char4:FlxSprite;
 	var logo:FlxSprite;
+	var versionShit2:FlxText;
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
@@ -181,7 +182,7 @@ class MainMenuState extends MusicBeatState
 		versionShit.setFormat(Paths.font('vcr.ttf'), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
 		
-		var versionShit2:FlxText = new FlxText(0, FlxG.height - 714, 0, 'Now Playing: Main Theme\nBy 75_7', 12);
+		versionShit2 = new FlxText(0, FlxG.height - 714, 0, 'Now Playing: Main Theme\nBy 75_7', 12);
 		versionShit2.scrollFactor.set();
 		versionShit2.setFormat(Paths.font('vcr.ttf'), 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		versionShit2.alpha = 0;
