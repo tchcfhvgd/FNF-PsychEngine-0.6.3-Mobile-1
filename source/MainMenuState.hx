@@ -51,6 +51,8 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
+		Conductor.bpm = 128.0;
+		
 		#if MODS_ALLOWED
 		Paths.pushGlobalMods();
 		#end
@@ -123,9 +125,8 @@ class MainMenuState extends MusicBeatState
 		char4.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char4);
 		
-		logo = new FlxSprite(720, -200).loadGraphic(Paths.image('titlescreen/TBSLogo'));
+		logo = new FlxSprite(720, -150).loadGraphic(Paths.image('titlescreen/TBSLogo'));
 	    logo.updateHitbox();
-	    logo.scale.set(0.4, 0.4);
 	    add(logo);
 		
 		// magenta.scrollFactor.set();
@@ -213,10 +214,7 @@ class MainMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (logo.scale.x > 0.45)
-			logo.scale.x = FlxMath.lerp(logo.scale.x, 0.4, 0.09);
-		if (logo.scale.y > 0.45)
-			logo.scale.y = FlxMath.lerp(logo.scale.y, 0.4, 0.09);
+		Conductor.songPosition = FlxG.sound.music.time;
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
@@ -346,13 +344,22 @@ class MainMenuState extends MusicBeatState
 		super.update(elapsed);
 	}
 	
-	override function stepHit()
+    override function beatHit()
 	{
-		super.stepHit();
-		logo.scale.x += 0.1;
-	    logo.scale.y += 0.1;
+		super.beatHit();
+		logoBump();
 	}
 
+	function logoBump()
+	{
+		if (logo != null)
+		{
+			logo.scale.set(0.45, 0.45);
+			FlxTween.cancelTweensOf(logo);
+			FlxTween.tween(logo, {"scale.x": 0.4, "scale.y": 0.4}, 0.28, {});
+		}
+	}
+	
 	function changeItem(huh:Int = 0)
 	{
 		curSelected += huh;
