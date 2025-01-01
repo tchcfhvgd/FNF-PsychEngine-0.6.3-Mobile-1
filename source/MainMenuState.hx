@@ -290,6 +290,34 @@ class MainMenuState extends MusicBeatState
 				}
 				else
 				{
+					FlxTween.tween(char1, {alpha: 0}, 0.4, {
+								ease: FlxEase.quadOut,
+								onComplete: function(twn:FlxTween)
+								{
+									char1.kill();
+								}
+							});
+				    FlxTween.tween(char2, {alpha: 0}, 0.4, {
+								ease: FlxEase.quadOut,
+								onComplete: function(twn:FlxTween)
+								{
+									char2.kill();
+								}
+							});
+					FlxTween.tween(char3, {alpha: 0}, 0.4, {
+								ease: FlxEase.quadOut,
+								onComplete: function(twn:FlxTween)
+								{
+									char3.kill();
+								}
+							});
+					FlxTween.tween(char4, {alpha: 0}, 0.4, {
+								ease: FlxEase.quadOut,
+								onComplete: function(twn:FlxTween)
+								{
+									char4.kill();
+								}
+							});
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 
@@ -315,9 +343,10 @@ class MainMenuState extends MusicBeatState
 			
 			    FlxTween.tween(spr, {x: 640 - spr.width / 2}, 0.6, {
 					ease: FlxEase.backInOut				
-				});						
-							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
-							{
+				});
+				FlxTween.tween(FlxG.camera, {zoom: 1.3}, 1, {ease: FlxEase.expoOut});						
+				new FlxTimer().start(2, function(tmr:FlxTimer)
+			{
 								var daChoice:String = optionShit[curSelected];
 
 								switch (daChoice)
@@ -375,25 +404,25 @@ class MainMenuState extends MusicBeatState
 		{
 			char1.scale.set(1, 1);
 			FlxTween.cancelTweensOf(char1);
-			FlxTween.tween(char1, {"scale.x": 0.95, "scale.y": 1}, 0.28, {});
+			FlxTween.tween(char1, {"scale.x": 0.9, "scale.y": 1}, 0.28, {});
 		}
 		if (char2 != null)
 		{
-			char2.scale.set(1.05, 1.05);
+			char2.scale.set(1, 1);
 			FlxTween.cancelTweensOf(char2);
-			FlxTween.tween(char2, {"scale.x": 1, "scale.y": 1}, 0.28, {});
+			FlxTween.tween(char2, {"scale.x": 0.9, "scale.y": 1}, 0.28, {});
 		}
 		if (char3 != null)
 		{
-			char3.scale.set(1.05, 1.05);
+			char3.scale.set(1, 1);
 			FlxTween.cancelTweensOf(char3);
-			FlxTween.tween(char3, {"scale.x": 1, "scale.y": 1}, 0.28, {});
+			FlxTween.tween(char3, {"scale.x": 0.9, "scale.y": 1}, 0.28, {});
 		}
 		if (char4 != null)
 		{
-			char4.scale.set(1.05, 1.05);
+			char4.scale.set(1, 1);
 			FlxTween.cancelTweensOf(char4);
-			FlxTween.tween(char4, {"scale.x": 1, "scale.y": 1}, 0.28, {});
+			FlxTween.tween(char4, {"scale.x": 0.9, "scale.y": 1}, 0.28, {});
 		}
 	}
 	
