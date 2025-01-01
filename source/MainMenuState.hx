@@ -28,6 +28,7 @@ class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '0.6.3'; //This is also used for Discord RPC
 	public static var curSelected:Int = 0;
+	var qqqeb:bool = true;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
 	private var camGame:FlxCamera;
@@ -180,6 +181,12 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat(Paths.font('vcr.ttf'), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
+		
+		var versionShit2:FlxText = new FlxText(0, FlxG.height - 714, 0, 'Now Playing: Main Theme\nBy 75_7', 12);
+		versionShit2.scrollFactor.set();
+		versionShit2.setFormat(Paths.font('vcr.ttf'), 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		versionShit2.alpha = 0;
+		add(versionShit2);
 
 		// NG.core.calls.event.logEvent('swag').send();
 
@@ -226,7 +233,9 @@ class MainMenuState extends MusicBeatState
 		var lerpVal:Float = CoolUtil.boundTo(elapsed * 7.5, 0, 1);
 		camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 
-		if (optionShit[curSelected] == 'story_mode')
+		if (!selectedSomethin)
+		{
+			if (optionShit[curSelected] == 'story_mode')
 		{
 			char1.alpha = 1;
 		}
@@ -261,9 +270,6 @@ class MainMenuState extends MusicBeatState
 		{
             char4.alpha = 0;
 		}
-		
-		if (!selectedSomethin)
-		{
 			if (controls.UI_UP_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -385,11 +391,22 @@ class MainMenuState extends MusicBeatState
 		super.update(elapsed);
 	}
 	
+    private var sickBeats:Int = 0;
     override function beatHit()
 	{
 		super.beatHit();
 		logoBump();
 		charBump();
+		
+		sickBeats++;
+		switch (sickBeats)
+	  {
+		case 5:
+		FlxTween.tween(versionShit2, {alpha: 1}, 1, {ease: FlxEase.circInOut});
+		
+		case 15:
+		FlxTween.tween(versionShit2, {alpha: 0}, 1, {ease: FlxEase.circInOut});
+	  }
 	}
 
 	function logoBump()
