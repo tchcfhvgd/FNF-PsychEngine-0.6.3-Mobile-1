@@ -298,14 +298,6 @@ class MainMenuState extends MusicBeatState
 
 					menuItems.forEach(function(spr:FlxSprite)
 					{
-					FlxTween.tween(char1, {alpha: 0}, 0.4, {
-							});
-				    FlxTween.tween(char2, {alpha: 0}, 0.4, {
-							});
-					FlxTween.tween(char3, {alpha: 0}, 0.4, {
-							});
-					FlxTween.tween(char4, {alpha: 0}, 0.4, {
-							});
 						if (curSelected != spr.ID)
 						{
 							FlxTween.tween(spr, {alpha: 0}, 0.4, {
@@ -325,7 +317,38 @@ class MainMenuState extends MusicBeatState
 			    FlxTween.tween(spr, {x: 640 - spr.width / 2}, 0.6, {
 					ease: FlxEase.backInOut				
 				});
-				FlxTween.tween(FlxG.camera, {zoom: 2}, 1, {ease: FlxEase.expoOut});						
+				FlxTween.tween(FlxG.camera, {zoom: 2}, 1, {ease: FlxEase.expoOut});
+				
+				FlxTween.tween(char1, {alpha: 0}, 0.4, {
+								ease: FlxEase.quadOut,
+								onComplete: function(twn:FlxTween)
+								{
+									char1.kill();
+								}
+				   });
+				   
+				 FlxTween.tween(char2, {alpha: 0}, 0.4, {
+								ease: FlxEase.quadOut,
+								onComplete: function(twn:FlxTween)
+								{
+									char2.kill();
+								}
+							});
+				 FlxTween.tween(char3, {alpha: 0}, 0.4, {
+								ease: FlxEase.quadOut,
+								onComplete: function(twn:FlxTween)
+								{
+									char3.kill();
+								}
+							});
+				 FlxTween.tween(char4, {alpha: 0}, 0.4, {
+								ease: FlxEase.quadOut,
+								onComplete: function(twn:FlxTween)
+								{
+									char4.kill();
+								}
+							});
+							
 				new FlxTimer().start(0.9, function(tmr:FlxTimer)
 			{
 								var daChoice:String = optionShit[curSelected];
