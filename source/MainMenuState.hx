@@ -309,6 +309,13 @@ class MainMenuState extends MusicBeatState
 						}
 						else
 						{
+			    FlxTween.tween(spr, {y: 360 - spr.height / 2}, 0.6, {
+					ease: FlxEase.backInOut
+			    });
+			
+			    FlxTween.tween(spr, {x: 640 - spr.width / 2}, 0.6, {
+					ease: FlxEase.backInOut				
+				});						
 							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
 							{
 								var daChoice:String = optionShit[curSelected];
@@ -366,25 +373,25 @@ class MainMenuState extends MusicBeatState
 	{
 		if (char1 != null)
 		{
-			char1.scale.set(1, 0.9);
+			char1.scale.set(1, 1);
 			FlxTween.cancelTweensOf(char1);
-			FlxTween.tween(char1, {"scale.x": 1, "scale.y": 1}, 0.28, {});
+			FlxTween.tween(char1, {"scale.x": 0.95, "scale.y": 1}, 0.28, {});
 		}
 		if (char2 != null)
 		{
-			char2.scale.set(1, 0.9);
+			char2.scale.set(1.05, 1.05);
 			FlxTween.cancelTweensOf(char2);
 			FlxTween.tween(char2, {"scale.x": 1, "scale.y": 1}, 0.28, {});
 		}
 		if (char3 != null)
 		{
-			char3.scale.set(1, 0.9);
+			char3.scale.set(1.05, 1.05);
 			FlxTween.cancelTweensOf(char3);
 			FlxTween.tween(char3, {"scale.x": 1, "scale.y": 1}, 0.28, {});
 		}
 		if (char4 != null)
 		{
-			char4.scale.set(1, 0.9);
+			char4.scale.set(1.05, 1.05);
 			FlxTween.cancelTweensOf(char4);
 			FlxTween.tween(char4, {"scale.x": 1, "scale.y": 1}, 0.28, {});
 		}
