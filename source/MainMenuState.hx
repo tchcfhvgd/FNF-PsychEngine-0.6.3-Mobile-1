@@ -134,8 +134,9 @@ class MainMenuState extends MusicBeatState
 		add(char4);
 		
 		logo = new FlxSprite(720, -200).loadGraphic(Paths.image('titlescreen/TBSLogo'));
-	logo.updateHitbox();
-	add(logo);
+	    logo.updateHitbox();
+	    qqqeb.scale.set(0.4, 0.4);
+	    add(logo);
 		
 		// magenta.scrollFactor.set();
 
@@ -222,6 +223,10 @@ class MainMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
+		if (qqqeb.scale.x > 0.45)
+			qqqeb.scale.x = FlxMath.lerp(qqqeb.scale.x, 0.4, 0.09);
+		if (qqqeb.scale.y > 0.45)
+			qqqeb.scale.y = FlxMath.lerp(qqqeb.scale.y, 0.4, 0.09);
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
@@ -354,7 +359,8 @@ class MainMenuState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
-		logoBump();
+		qqqeb.scale.x += 0.1;
+	    qqqeb.scale.y += 0.1;
 	}
 
 	function changeItem(huh:Int = 0)
@@ -382,15 +388,5 @@ class MainMenuState extends MusicBeatState
 				spr.centerOffsets();
 			}
 		});
-	}
-	
-	function logoBump()
-	{
-		if (logo != null)
-		{
-			logo.scale.set(0.45, 0.45);
-			FlxTween.cancelTweensOf(logo);
-			FlxTween.tween(logo, {"scale.x": 0.4, "scale.y": 0.4}, 0.28, {});
-		}
 	}
 }
