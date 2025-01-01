@@ -104,25 +104,25 @@ class MainMenuState extends MusicBeatState
 				
 		char1 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/story_mode'));
 		char1.updateHitbox();
-		char1.visible = false;
+		char1.alpha = 0;
 		char1.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char1);
 
 		char2 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/freeplay'));
 		char2.updateHitbox();
-		char2.visible = false;
+		char2.alpha = 0;
 		char2.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char2);
 
 		char3 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/credits'));
 		char3.updateHitbox();
-		char3.visible = false;
+		char3.alpha = 0;
 		char3.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char3);
 
 		char4 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/options'));
 		char4.updateHitbox();
-		char4.visible = false;
+		char4.alpha = 0;
 		char4.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char4);
 		
@@ -228,38 +228,38 @@ class MainMenuState extends MusicBeatState
 
 		if (optionShit[curSelected] == 'story_mode')
 		{
-			char1.visible = true;
+			char1.alpha = 1;
 		}
 		else
 		{
-            char1.visible = false;
+            char1.alpha = 0;
 		}
 
                 if (optionShit[curSelected] == 'freeplay')
 		{
-			char2.visible = true;
+			char2.alpha = 1;
 		}
 		else
 		{
-            char2.visible = false;
+            char2.alpha = 0;
 		}
 
 		if (optionShit[curSelected] == 'credits')
 		{
-			char3.visible = true;
+			char3.alpha = 1;
 		}
 		else
 		{
-            char3.visible = false;
+            char3.alpha = 0;
 		}
 
 		if (optionShit[curSelected] == 'options')
 		{
-			char4.visible = true;
+			char4.alpha = 1;
 		}
 		else
 		{
-            char4.visible = false;
+            char4.alpha = 0;
 		}
 		
 		if (!selectedSomethin)
@@ -299,32 +299,12 @@ class MainMenuState extends MusicBeatState
 					menuItems.forEach(function(spr:FlxSprite)
 					{
 					FlxTween.tween(char1, {alpha: 0}, 0.4, {
-								ease: FlxEase.quadOut,
-								onComplete: function(twn:FlxTween)
-								{
-									char1.kill();
-								}
 							});
 				    FlxTween.tween(char2, {alpha: 0}, 0.4, {
-								ease: FlxEase.quadOut,
-								onComplete: function(twn:FlxTween)
-								{
-									char2.kill();
-								}
 							});
 					FlxTween.tween(char3, {alpha: 0}, 0.4, {
-								ease: FlxEase.quadOut,
-								onComplete: function(twn:FlxTween)
-								{
-									char3.kill();
-								}
 							});
 					FlxTween.tween(char4, {alpha: 0}, 0.4, {
-								ease: FlxEase.quadOut,
-								onComplete: function(twn:FlxTween)
-								{
-									char4.kill();
-								}
 							});
 						if (curSelected != spr.ID)
 						{
@@ -345,8 +325,8 @@ class MainMenuState extends MusicBeatState
 			    FlxTween.tween(spr, {x: 640 - spr.width / 2}, 0.6, {
 					ease: FlxEase.backInOut				
 				});
-				FlxTween.tween(FlxG.camera, {zoom: 1.8}, 1, {ease: FlxEase.expoOut});						
-				new FlxTimer().start(1, function(tmr:FlxTimer)
+				FlxTween.tween(FlxG.camera, {zoom: 2}, 1, {ease: FlxEase.expoOut});						
+				new FlxTimer().start(0.9, function(tmr:FlxTimer)
 			{
 								var daChoice:String = optionShit[curSelected];
 
