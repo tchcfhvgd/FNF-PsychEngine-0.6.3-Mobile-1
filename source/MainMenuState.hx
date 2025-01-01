@@ -101,7 +101,7 @@ class MainMenuState extends MusicBeatState
 		
 		var qqqeb:Float = 1;
 		
-		char1 = new FlxSprite(700, 60).loadGraphic(Paths.image('mainmenuchar/story_mode'));
+		char1 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/story_mode'));
 		char1.scale.x = qqqeb;
 		char1.scale.y = qqqeb;
 		char1.updateHitbox();
@@ -109,7 +109,7 @@ class MainMenuState extends MusicBeatState
 		char1.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char1);
 
-		char2 = new FlxSprite(700, 60).loadGraphic(Paths.image('mainmenuchar/freeplay'));
+		char2 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/freeplay'));
 		char2.scale.x = qqqeb;
 		char2.scale.y = qqqeb;
 		char2.updateHitbox();
@@ -117,7 +117,7 @@ class MainMenuState extends MusicBeatState
 		char2.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char2);
 
-		char3 = new FlxSprite(700, 60).loadGraphic(Paths.image('mainmenuchar/credits'));
+		char3 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/credits'));
 		char3.scale.x = qqqeb;
 		char3.scale.y = qqqeb;
 		char3.updateHitbox();
@@ -125,7 +125,7 @@ class MainMenuState extends MusicBeatState
 		char3.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char3);
 
-		char4 = new FlxSprite(700, 60).loadGraphic(Paths.image('mainmenuchar/options'));
+		char4 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/options'));
 		char4.scale.x = qqqeb;
 		char4.scale.y = qqqeb;
 		char4.updateHitbox();
@@ -133,7 +133,7 @@ class MainMenuState extends MusicBeatState
 		char4.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char4);
 		
-		logo = new FlxSprite(720, -220).loadGraphic(Paths.image('titlescreen/TBSLogo'));
+		logo = new FlxSprite(720, -200).loadGraphic(Paths.image('titlescreen/TBSLogo'));
 	logo.updateHitbox();
 	add(logo);
 		
@@ -350,6 +350,12 @@ class MainMenuState extends MusicBeatState
 
 		super.update(elapsed);
 	}
+	
+	override function beatHit()
+	{
+		super.beatHit();
+		logoBump();
+	}
 
 	function changeItem(huh:Int = 0)
 	{
@@ -376,13 +382,6 @@ class MainMenuState extends MusicBeatState
 				spr.centerOffsets();
 			}
 		});
-	}
-	
-	override function stepHit()
-	{
-		super.stepHit();
-		
-		logoBump();
 	}
 	
 	function logoBump()
