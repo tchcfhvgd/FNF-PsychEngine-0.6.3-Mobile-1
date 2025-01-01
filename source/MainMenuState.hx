@@ -346,9 +346,9 @@ class MainMenuState extends MusicBeatState
 		super.update(elapsed);
 	}
 	
-	override function beatHit()
+	override function stepHit()
 	{
-		super.beatHit();
+		super.stepHit();
 		logo.scale.x += 0.1;
 	    logo.scale.y += 0.1;
 	}
