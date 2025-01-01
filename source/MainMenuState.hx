@@ -98,36 +98,26 @@ class MainMenuState extends MusicBeatState
 		magenta.antialiasing = ClientPrefs.globalAntialiasing;
 		magenta.color = 0xFFfd719b;
 		//add(magenta);
-		
-		var qqqeb:Float = 1;
-		
+				
 		char1 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/story_mode'));
-		char1.scale.x = qqqeb;
-		char1.scale.y = qqqeb;
 		char1.updateHitbox();
 		char1.visible = false;
 		char1.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char1);
 
 		char2 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/freeplay'));
-		char2.scale.x = qqqeb;
-		char2.scale.y = qqqeb;
 		char2.updateHitbox();
 		char2.visible = false;
 		char2.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char2);
 
 		char3 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/credits'));
-		char3.scale.x = qqqeb;
-		char3.scale.y = qqqeb;
 		char3.updateHitbox();
 		char3.visible = false;
 		char3.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char3);
 
 		char4 = new FlxSprite(700, 50).loadGraphic(Paths.image('mainmenuchar/options'));
-		char4.scale.x = qqqeb;
-		char4.scale.y = qqqeb;
 		char4.updateHitbox();
 		char4.visible = false;
 		char4.antialiasing = ClientPrefs.globalAntialiasing;
@@ -135,7 +125,7 @@ class MainMenuState extends MusicBeatState
 		
 		logo = new FlxSprite(720, -200).loadGraphic(Paths.image('titlescreen/TBSLogo'));
 	    logo.updateHitbox();
-	    qqqeb.scale.set(0.4, 0.4);
+	    logo.scale.set(0.4, 0.4);
 	    add(logo);
 		
 		// magenta.scrollFactor.set();
@@ -223,10 +213,10 @@ class MainMenuState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (qqqeb.scale.x > 0.45)
-			qqqeb.scale.x = FlxMath.lerp(qqqeb.scale.x, 0.4, 0.09);
-		if (qqqeb.scale.y > 0.45)
-			qqqeb.scale.y = FlxMath.lerp(qqqeb.scale.y, 0.4, 0.09);
+		if (logo.scale.x > 0.45)
+			logo.scale.x = FlxMath.lerp(logo.scale.x, 0.4, 0.09);
+		if (logo.scale.y > 0.45)
+			logo.scale.y = FlxMath.lerp(logo.scale.y, 0.4, 0.09);
 		if (FlxG.sound.music.volume < 0.8)
 		{
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
@@ -359,8 +349,8 @@ class MainMenuState extends MusicBeatState
 	override function beatHit()
 	{
 		super.beatHit();
-		qqqeb.scale.x += 0.1;
-	    qqqeb.scale.y += 0.1;
+		logo.scale.x += 0.1;
+	    logo.scale.y += 0.1;
 	}
 
 	function changeItem(huh:Int = 0)
