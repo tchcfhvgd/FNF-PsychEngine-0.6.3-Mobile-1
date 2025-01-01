@@ -7,6 +7,7 @@ import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxCamera;
+import flixel.util.FlxTimer;
 import flixel.addons.transition.FlxTransitionableState;
 import flixel.effects.FlxFlicker;
 import flixel.graphics.frames.FlxAtlasFrames;
@@ -345,7 +346,7 @@ class MainMenuState extends MusicBeatState
 					ease: FlxEase.backInOut				
 				});
 				FlxTween.tween(FlxG.camera, {zoom: 1.3}, 1, {ease: FlxEase.expoOut});						
-				new FlxTimer().start(2, function(tmr:FlxTimer)
+				new FlxTimer().start(1.25, function(tmr:FlxTimer)
 			{
 								var daChoice:String = optionShit[curSelected];
 
