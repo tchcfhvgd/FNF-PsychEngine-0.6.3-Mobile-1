@@ -127,6 +127,7 @@ class MainMenuState extends MusicBeatState
 		
 		logo = new FlxSprite(720, -150).loadGraphic(Paths.image('titlescreen/TBSLogo'));
 	    logo.updateHitbox();
+	    logo.scale.set(0.45, 0.45);
 	    add(logo);
 		
 		// magenta.scrollFactor.set();
@@ -348,6 +349,7 @@ class MainMenuState extends MusicBeatState
 	{
 		super.beatHit();
 		logoBump();
+		charBump();
 	}
 
 	function logoBump()
@@ -357,6 +359,34 @@ class MainMenuState extends MusicBeatState
 			logo.scale.set(0.45, 0.45);
 			FlxTween.cancelTweensOf(logo);
 			FlxTween.tween(logo, {"scale.x": 0.4, "scale.y": 0.4}, 0.28, {});
+		}
+	}
+	
+	function charBump()
+	{
+		if (char1 != null)
+		{
+			char1.scale.set(1, 0.9);
+			FlxTween.cancelTweensOf(char1);
+			FlxTween.tween(char1, {"scale.x": 1, "scale.y": 1}, 0.28, {});
+		}
+		if (char2 != null)
+		{
+			char2.scale.set(1, 0.9);
+			FlxTween.cancelTweensOf(char2);
+			FlxTween.tween(char2, {"scale.x": 1, "scale.y": 1}, 0.28, {});
+		}
+		if (char3 != null)
+		{
+			char3.scale.set(1, 0.9);
+			FlxTween.cancelTweensOf(char3);
+			FlxTween.tween(char3, {"scale.x": 1, "scale.y": 1}, 0.28, {});
+		}
+		if (char4 != null)
+		{
+			char4.scale.set(1, 0.9);
+			FlxTween.cancelTweensOf(char4);
+			FlxTween.tween(char4, {"scale.x": 1, "scale.y": 1}, 0.28, {});
 		}
 	}
 	
