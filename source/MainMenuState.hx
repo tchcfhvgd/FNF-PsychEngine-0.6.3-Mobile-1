@@ -53,7 +53,7 @@ class MainMenuState extends MusicBeatState
 
 	override function create()
 	{
-		Conductor.bpm = 128.0;
+		Conductor.changeBPM(102);
 		
 		#if MODS_ALLOWED
 		Paths.pushGlobalMods();
@@ -325,7 +325,7 @@ class MainMenuState extends MusicBeatState
 				});
 				FlxTween.tween(FlxG.camera, {zoom: 2}, 1, {ease: FlxEase.expoOut});
 				
-				FlxTween.tween(char1, {alpha: 0}, 0.4, {
+				FlxTween.tween(char1, {alpha: 0}, 0.2, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)
 								{
@@ -333,21 +333,21 @@ class MainMenuState extends MusicBeatState
 								}
 				   });
 				   
-				 FlxTween.tween(char2, {alpha: 0}, 0.4, {
+				 FlxTween.tween(char2, {alpha: 0}, 0.2, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)
 								{
 									char2.kill();
 								}
 							});
-				 FlxTween.tween(char3, {alpha: 0}, 0.4, {
+				 FlxTween.tween(char3, {alpha: 0}, 0.2, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)
 								{
 									char3.kill();
 								}
 							});
-				 FlxTween.tween(char4, {alpha: 0}, 0.4, {
+				 FlxTween.tween(char4, {alpha: 0}, 0.2, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)
 								{
