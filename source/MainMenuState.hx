@@ -101,7 +101,7 @@ class MainMenuState extends MusicBeatState
 		
 		var qqqeb:Float = 1;
 		
-		char1 = new FlxSprite(700, 30).loadGraphic(Paths.image('mainmenuchar/storymode'));
+		char1 = new FlxSprite(700, 30).loadGraphic(Paths.image('mainmenuchar/story_mode'));
 		char1.scale.x = qqqeb;
 		char1.scale.y = qqqeb;
 		char1.updateHitbox();
@@ -378,11 +378,21 @@ class MainMenuState extends MusicBeatState
 		});
 	}
 	
+	var lastBeatHit:Int = -1;
 	override function beatHit()
 	{
 		super.beatHit();
 		
-		logoBump();
+		if(lastBeatHit == curBeat)
+		{
+			return;
+		}
+
+		if(curBeat % 2 == 0)
+		{
+			logoBump();
+		}
+		lastBeatHit = curBeat;
 	}
 	
 	function logoBump()
