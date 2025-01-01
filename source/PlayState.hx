@@ -1162,7 +1162,7 @@ class PlayState extends MusicBeatState
 		healthBarBG.sprTracker = healthBar;
 		
 		healthbarHQ = new AttachedSprite('healthbarHQ');
-		healthbarHQ.y = healthBarBG.y - 565;
+		healthbarHQ.y = healthBarBG.y - 555;
 		healthbarHQ.screenCenter(X);
 		healthbarHQ.scrollFactor.set();
 		healthbarHQ.scale.set(0.415, 0.415);
@@ -1182,7 +1182,7 @@ class PlayState extends MusicBeatState
 		add(iconP2);
 		reloadHealthBarColors();
 
-		scoreTxt = new FlxText(0, healthBarBG.y + 66, FlxG.width, "", 20);
+		scoreTxt = new FlxText(0, healthBarBG.y + 46, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
