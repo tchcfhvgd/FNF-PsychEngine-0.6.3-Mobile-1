@@ -109,7 +109,7 @@ class MainMenuState extends MusicBeatState
 		char1.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char1);
 
-		char2 = new FlxSprite(730, 200).loadGraphic(Paths.image('mainmenuchar/freeplay'));
+		char2 = new FlxSprite(730, 0).loadGraphic(Paths.image('mainmenuchar/freeplay'));
 		char2.scale.x = qqqeb;
 		char2.scale.y = qqqeb;
 		char2.updateHitbox();
@@ -117,7 +117,7 @@ class MainMenuState extends MusicBeatState
 		char2.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char2);
 
-		char3 = new FlxSprite(645, 140).loadGraphic(Paths.image('mainmenuchar/credits'));
+		char3 = new FlxSprite(645, 0).loadGraphic(Paths.image('mainmenuchar/credits'));
 		char3.scale.x = qqqeb;
 		char3.scale.y = qqqeb;
 		char3.updateHitbox();
@@ -125,7 +125,7 @@ class MainMenuState extends MusicBeatState
 		char3.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char3);
 
-		char4 = new FlxSprite(660, 260).loadGraphic(Paths.image('mainmenuchar/options'));
+		char4 = new FlxSprite(660, 0).loadGraphic(Paths.image('mainmenuchar/options'));
 		char4.scale.x = qqqeb;
 		char4.scale.y = qqqeb;
 		char4.updateHitbox();
@@ -388,7 +388,10 @@ class MainMenuState extends MusicBeatState
 		}
 		
 		lastStepHit = curStep;
-		logoBump();
+		if(curStep % 4 == 0)
+		{
+			logoBump();
+		}
 	}
 	
 	function logoBump()
