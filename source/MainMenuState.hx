@@ -378,21 +378,17 @@ class MainMenuState extends MusicBeatState
 		});
 	}
 	
-	var lastBeatHit:Int = -1;
-	override function beatHit()
+	var lastStepHit:Int = -1;
+	override function stepHit()
 	{
-		super.beatHit();
+		super.stepHit();
 		
-		if(lastBeatHit == curBeat)
-		{
+		if(curStep == lastStepHit) {
 			return;
 		}
-
-		if(curBeat % 2 == 0)
-		{
-			logoBump();
-		}
-		lastBeatHit = curBeat;
+		
+		lastStepHit = curStep;
+		logoBump();
 	}
 	
 	function logoBump()
