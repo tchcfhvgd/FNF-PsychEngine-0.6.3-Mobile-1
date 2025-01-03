@@ -127,7 +127,7 @@ class MainMenuState extends MusicBeatState
 		char4.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char4);
 		
-		logo = new FlxSprite(720, -150).loadGraphic(Paths.image('titlescreen/TBSLogo'));
+		logo = new FlxSprite(750, -200).loadGraphic(Paths.image('titlescreen/TBSLogo'));
 	    logo.updateHitbox();
 	    logo.scale.set(0.45, 0.45);
 	    add(logo);
@@ -325,7 +325,7 @@ class MainMenuState extends MusicBeatState
 				});
 				FlxTween.tween(FlxG.camera, {zoom: 2}, 1, {ease: FlxEase.expoOut});
 				
-				FlxTween.tween(char1, {alpha: 0}, 0.2, {
+				FlxTween.tween(char1, {alpha: 0}, 0.4, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)
 								{
@@ -333,21 +333,21 @@ class MainMenuState extends MusicBeatState
 								}
 				   });
 				   
-				 FlxTween.tween(char2, {alpha: 0}, 0.2, {
+				 FlxTween.tween(char2, {alpha: 0}, 0.4, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)
 								{
 									char2.kill();
 								}
 							});
-				 FlxTween.tween(char3, {alpha: 0}, 0.2, {
+				 FlxTween.tween(char3, {alpha: 0}, 0.4, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)
 								{
 									char3.kill();
 								}
 							});
-				 FlxTween.tween(char4, {alpha: 0}, 0.2, {
+				 FlxTween.tween(char4, {alpha: 0}, 0.4, {
 								ease: FlxEase.quadOut,
 								onComplete: function(twn:FlxTween)
 								{
@@ -365,12 +365,6 @@ class MainMenuState extends MusicBeatState
 										MusicBeatState.switchState(new StoryMenuState());
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
-									#if MODS_ALLOWED
-									case 'mods':
-										MusicBeatState.switchState(new ModsMenuState());
-									#end
-									case 'awards':
-										MusicBeatState.switchState(new AchievementsMenuState());
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
 									case 'options':
@@ -396,16 +390,17 @@ class MainMenuState extends MusicBeatState
 	{
 		super.beatHit();
 		logoBump();
+		if (!selectedSomethin)
 		charBump();
 		
 		sickBeats++;
 		switch (sickBeats)
 	  {
 		case 5:
-		FlxTween.tween(versionShit2, {alpha: 1}, 1, {ease: FlxEase.circInOut});
+		FlxTween.tween(versionShit2, {alpha: 1}, 4, {ease: FlxEase.circInOut});
 		
 		case 15:
-		FlxTween.tween(versionShit2, {alpha: 0}, 1, {ease: FlxEase.circInOut});
+		FlxTween.tween(versionShit2, {alpha: 0}, 4, {ease: FlxEase.circInOut});
 	  }
 	}
 
