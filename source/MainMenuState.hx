@@ -127,7 +127,7 @@ class MainMenuState extends MusicBeatState
 		char4.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char4);
 		
-		logo = new FlxSprite(750, -200).loadGraphic(Paths.image('titlescreen/TBSLogo'));
+		logo = new FlxSprite(750, -170).loadGraphic(Paths.image('titlescreen/TBSLogo'));
 	    logo.updateHitbox();
 	    logo.scale.set(0.45, 0.45);
 	    add(logo);
