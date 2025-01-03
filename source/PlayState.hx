@@ -205,6 +205,7 @@ class PlayState extends MusicBeatState
 	private var generatedMusic:Bool = false;
 	public var endingSong:Bool = false;
 	public var startingSong:Bool = false;
+	public var loadvideo:Bool = false;
 	private var updateTime:Bool = true;
 	public static var changedDifficulty:Bool = false;
 	public static var chartingMode:Bool = false;
@@ -1641,6 +1642,7 @@ class PlayState extends MusicBeatState
 	{
 		#if VIDEOS_ALLOWED
 		inCutscene = true;
+		loadvideo = true;
 
 		var filepath:String = Paths.video(name);
 		#if sys
@@ -1661,6 +1663,7 @@ class PlayState extends MusicBeatState
 		{
 			video.dispose();
 			startAndEnd();
+			loadvideo = false;
 			return;
 		}, true);
 
@@ -3093,7 +3096,7 @@ class PlayState extends MusicBeatState
 			botplayTxt.alpha = 1 - Math.sin((Math.PI * botplaySine) / 180);
 		}
 
-		if (#if android FlxG.android.justReleased.BACK #else touchPad.buttonP.justPressed #end || controls.PAUSE && startedCountdown && canPause)
+		if (#if android FlxG.android.justReleased.BACK #else touchPad.buttonP.justPressed #end || controls.PAUSE && startedCountdown && canPause && !loadvideo)
 		{
 			var ret:Dynamic = callOnLuas('onPause', [], false);
 			if(ret != FunkinLua.Function_Stop) {
@@ -5410,7 +5413,8 @@ class PlayState extends MusicBeatState
 			ratingFC = "";
 			if (sicks > 0) ratingFC = "WFC";
 			if (goods > 0) ratingFC = "OFC";
-			if (bads > 0 || shits > 0) ratingFC = "FC";
+			if (bads > 0) ratingFC = "NFC";
+			if (shits > 0) ratingFC = "FC";
 			if (songMisses > 0 && songMisses < 10) ratingFC = "SDCB";
 			else if (songMisses >= 10) ratingFC = "Clear";
 		}

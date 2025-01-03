@@ -127,7 +127,7 @@ class MainMenuState extends MusicBeatState
 		char4.antialiasing = ClientPrefs.globalAntialiasing;
 		add(char4);
 		
-		logo = new FlxSprite(750, -170).loadGraphic(Paths.image('titlescreen/TBSLogo'));
+		logo = new FlxSprite(720, -170).loadGraphic(Paths.image('titlescreen/TBSLogo'));
 	    logo.updateHitbox();
 	    logo.scale.set(0.45, 0.45);
 	    add(logo);
@@ -397,10 +397,10 @@ class MainMenuState extends MusicBeatState
 		switch (sickBeats)
 	  {
 		case 5:
-		FlxTween.tween(versionShit2, {alpha: 1}, 4, {ease: FlxEase.circInOut});
+		FlxTween.tween(versionShit2, {alpha: 1}, 3, {ease: FlxEase.circInOut});
 		
 		case 15:
-		FlxTween.tween(versionShit2, {alpha: 0}, 4, {ease: FlxEase.circInOut});
+		FlxTween.tween(versionShit2, {alpha: 0}, 3, {ease: FlxEase.circInOut});
 	  }
 	}
 
