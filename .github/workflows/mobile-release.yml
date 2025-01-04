@@ -6,8 +6,7 @@ permissions:
   discussions: write
 
 env:
-  PROJECT_NAME: PsychEngine
-
+  PROJECT_NAME: The Basement Show
 jobs:
   build:
     name: ${{ matrix.name }}
