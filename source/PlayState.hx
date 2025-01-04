@@ -5599,7 +5599,7 @@ class PlayState extends MusicBeatState
     function healthTween()
 	{
 		healthTweenObj.cancel();
-		healthTweenObj = FlxTween.num(health, health, 0.4, {ease: FlxEase.cubeInOut}, function(v:Float)
+		healthTweenObj = FlxTween.num(health, health, 0.1, {ease: FlxEase.cubeInOut}, function(v:Float)
 		{
 			health = v;
 		});
