@@ -3090,8 +3090,6 @@ class PlayState extends MusicBeatState
 		}
 
 		super.update(elapsed);
-		
-		healthTween();
 
 		setOnLuas('curDecStep', curDecStep);
 		setOnLuas('curDecBeat', curDecBeat);
@@ -3970,12 +3968,12 @@ class PlayState extends MusicBeatState
 		if(!startingSong) {
 			notes.forEach(function(daNote:Note) {
 				if(daNote.strumTime < songLength - Conductor.safeZoneOffset) {
-					health -= 0.05 * healthLoss;
+				   healthTween2(0.05 * healthLoss);
 				}
 			});
 			for (daNote in unspawnNotes) {
 				if(daNote.strumTime < songLength - Conductor.safeZoneOffset) {
-					health -= 0.05 * healthLoss;
+				    healthTween2(0.05 * healthLoss);
 				}
 			}
 
@@ -4707,7 +4705,7 @@ class PlayState extends MusicBeatState
 			}
 		});
 		combo = 0;
-		health -= daNote.missHealth * healthLoss;
+		healthTween2(daNote.missHealth * healthLoss);
 		
 		if(instakillOnMiss)
 		{
@@ -4744,7 +4742,7 @@ class PlayState extends MusicBeatState
 
 		if (!boyfriend.stunned)
 		{
-			health -= 0.05 * healthLoss;
+			healthTween2(0.05 * healthLoss);
 			if(instakillOnMiss)
 			{
 				vocals.volume = 0;
@@ -4880,7 +4878,7 @@ class PlayState extends MusicBeatState
 				if(combo > 9999) combo = 9999;
 				popUpScore(note);
 			}
-			health += note.hitHealth * healthGain;
+			healthTween(note.hitHealth * healthGain);
 
 			if(!note.noAnimation) {
 				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))];
@@ -5596,10 +5594,18 @@ class PlayState extends MusicBeatState
 		}
 		return false;
 	}
-    function healthTween()
+    function healthTween(amt:Float)
 	{
 		healthTweenObj.cancel();
-		healthTweenObj = FlxTween.num(health, health, 0.1, {ease: FlxEase.cubeInOut}, function(v:Float)
+		healthTweenObj = FlxTween.num(health, health + amt, 0.4, {ease: FlxEase.cubeInOut}, function(v:Float)
+		{
+			health = v;
+		});
+	}
+	function healthTween2(amt:Float)
+	{
+		healthTweenObj.cancel();
+		healthTweenObj = FlxTween.num(health, health - amt, 0.4, {ease: FlxEase.cubeInOut}, function(v:Float)
 		{
 			health = v;
 		});
