@@ -31,7 +31,7 @@ class FlashingState extends MusicBeatState
 		warnText.screenCenter(Y);
 		add(warnText);
 
-		FlxTween.color(warnTitle, 2, FlxColor.WHITE, FlxColor.RED, {});
+		FlxTween.color(warnText, 2, FlxColor.WHITE, FlxColor.RED, {ease: FlxEase.quadOut});
 
 		addTouchPad("NONE", "A_B");
 	}
