@@ -282,6 +282,7 @@ class PlayState extends MusicBeatState
 	public var scoreTxt:FlxText;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
+	var healthTweenObj:FlxTween;
 
 	public static var campaignScore:Int = 0;
 	public static var campaignMisses:Int = 0;
@@ -449,6 +450,8 @@ class PlayState extends MusicBeatState
 		// String for when the game is paused
 		detailsPausedText = "Paused - " + detailsText;
 		#end
+		
+		healthTweenObj = FlxTween.tween(this, {}, 0);
 
 		GameOverSubstate.resetVariables();
 		var songName:String = Paths.formatToSongPath(SONG.song);
@@ -3965,12 +3968,12 @@ class PlayState extends MusicBeatState
 		if(!startingSong) {
 			notes.forEach(function(daNote:Note) {
 				if(daNote.strumTime < songLength - Conductor.safeZoneOffset) {
-					health -= 0.05 * healthLoss;
+					healthTween2(0.05 * healthLoss);
 				}
 			});
 			for (daNote in unspawnNotes) {
 				if(daNote.strumTime < songLength - Conductor.safeZoneOffset) {
-					health -= 0.05 * healthLoss;
+					healthTween2(0.05 * healthLoss);
 				}
 			}
 
@@ -4702,7 +4705,7 @@ class PlayState extends MusicBeatState
 			}
 		});
 		combo = 0;
-		health -= daNote.missHealth * healthLoss;
+		healthTween2(daNote.missHealth * healthLoss);
 		
 		if(instakillOnMiss)
 		{
@@ -4739,7 +4742,7 @@ class PlayState extends MusicBeatState
 
 		if (!boyfriend.stunned)
 		{
-			health -= 0.05 * healthLoss;
+			healthTween2(0.05 * healthLoss);
 			if(instakillOnMiss)
 			{
 				vocals.volume = 0;
@@ -4875,7 +4878,7 @@ class PlayState extends MusicBeatState
 				if(combo > 9999) combo = 9999;
 				popUpScore(note);
 			}
-			health += note.hitHealth * healthGain;
+			healthTween(note.hitHealth * healthGain);
 
 			if(!note.noAnimation) {
 				var animToPlay:String = singAnimations[Std.int(Math.abs(note.noteData))];
@@ -5590,5 +5593,21 @@ class PlayState extends MusicBeatState
 				return false;
 		}
 		return false;
+	}
+    function healthTween(amt:Float)
+	{
+		healthTweenObj.cancel();
+		healthTweenObj = FlxTween.num(health, health + amt, 0.1, {ease: FlxEase.cubeInOut}, function(v:Float)
+		{
+			health = v;
+		});
+	}
+	function healthTween2(amt:Float)
+	{
+		healthTweenObj.cancel();
+		healthTweenObj = FlxTween.num(health, health - amt, 0.1, {ease: FlxEase.cubeInOut}, function(v:Float)
+		{
+			health = v;
+		});
 	}
 }
