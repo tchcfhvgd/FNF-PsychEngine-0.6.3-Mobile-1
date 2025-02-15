@@ -894,7 +894,7 @@ class PlayState extends MusicBeatState
 		{
 			if(FileSystem.exists(folder))
 			{
-				#if (android || linux)
+				#if linux
 				for (file in CoolUtil.sortAlphabetically(Paths.readDirectory(folder)))
 				#else
 				for (file in Paths.readDirectory(folder))
@@ -1280,7 +1280,7 @@ class PlayState extends MusicBeatState
 		{
 			if(FileSystem.exists(folder))
 			{
-				#if (android || linux)
+				#if linux
 				for (file in CoolUtil.sortAlphabetically(Paths.readDirectory(folder)))
 				#else
 				for (file in Paths.readDirectory(folder))
