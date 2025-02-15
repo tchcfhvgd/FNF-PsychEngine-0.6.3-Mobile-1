@@ -16,6 +16,9 @@ import openfl.utils.Assets;
 
 using StringTools;
 
+#if cpp
+@:cppFileCode('#include <thread>')
+#end
 class CoolUtil
 {
 	public static var defaultDifficulties:Array<String> = [
@@ -171,4 +174,14 @@ class CoolUtil
 		FlxG.stage.window.alert(message, title);
 		//#end
 	}
+
+	#if cpp
+    @:functionCode('
+        return std::thread::hardware_concurrency();
+    ')
+	#end
+    public static function getCPUThreadsCount():Int
+    {
+        return 1;
+    }
 }
