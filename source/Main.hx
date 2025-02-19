@@ -13,6 +13,7 @@ import openfl.display.StageScaleMode;
 #if mobile
 import mobile.CopyState;
 #end
+
 #if windows
 @:buildXml('
 <target id="haxe">
@@ -27,8 +28,6 @@ import mobile.CopyState;
 extern "C" HRESULT WINAPI SetCurrentProcessExplicitAppUserModelID(PCWSTR AppID);
 ')
 #end
-
-using StringTools;
 
 class Main extends Sprite
 {
