@@ -20,12 +20,12 @@ jobs:
             artifactPath: export\release\windows\bin\*
           - name: Linux
             os: ubuntu-22.04
-            buildArgs: "linux -arm64 -D HXCPP_ARM64"
+            buildArgs: linux
             artifactName: linuxBuild
             artifactPath: export/release/linux/bin/*
           - name: Linux ARM64
             os: ubuntu-22.04-arm
-            buildArgs: linux
+            buildArgs: "linux -arm64 -D HXCPP_ARM64"
             artifactName: linuxArm64Build
             artifactPath: export/release/linux/bin/*
           - name: macOS x86_64
