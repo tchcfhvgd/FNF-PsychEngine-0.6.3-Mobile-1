@@ -9,7 +9,7 @@ jobs:
       matrix:
         include:
           - name: Windows
-            os: windows-2019
+            os: windows-2022
             buildArgs: windows
             artifactName: windowsBuild
             artifactPath: export\release\windows\bin\*
@@ -29,17 +29,17 @@ jobs:
             artifactName: linuxArm64Build
             artifactPath: export/release/linux/bin/*
           - name: macOS x86_64
-            os: macos-13
+            os: macos-14
             buildArgs: "mac -D HXCPP_M64"
             artifactName: macOSBuild-x86_64
             artifactPath: export/release/macos/bin/*
           - name: Android
-            os: ubunutu-22.04
+            os: macos-14
             buildArgs: "android -ONLY_ARMV7"
             artifactName: androidBuild
             artifactPath: "export/release/android/bin/app/build/outputs/apk/release/*.apk"
           - name: iOS
-            os: macos-13
+            os: macos-14
             buildArgs: "ios -nosign"
             artifactName: iOSBuild
             artifactPath: "export/release/ios/build/Release-iphoneos/*.ipa"
