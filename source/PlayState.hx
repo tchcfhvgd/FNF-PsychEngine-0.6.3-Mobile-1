@@ -537,7 +537,7 @@ class PlayState extends MusicBeatState
     bg2.updateHitbox();
     bg2.scrollFactor.set(0, 0);
     bg2.scale.set(1, 1);
-    bg2.camera = camCinem;
+    bg2.camera = [camCinem];
     bg2.alpha = 0;
     add(bg2);
     
