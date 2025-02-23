@@ -175,6 +175,8 @@ class PlayState extends MusicBeatState
 	public var opponentStrums:FlxTypedGroup<StrumNote>;
 	public var playerStrums:FlxTypedGroup<StrumNote>;
 	public var grpNoteSplashes:FlxTypedGroup<NoteSplash>;
+	var bg2:BGSprite;
+    var idle:FlxSprite;
 
 	public var camZooming:Bool = false;
 	public var camZoomingMult:Float = 1;
@@ -218,6 +220,7 @@ class PlayState extends MusicBeatState
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
 	public var camHUD:FlxCamera;
+	public var camCinem:FlxCamera;
 	public var camGame:FlxCamera;
 	public var camOther:FlxCamera;
 	public var luaTpadCam:FlxCamera;
@@ -398,6 +401,7 @@ class PlayState extends MusicBeatState
 
 		// var gameCam:FlxCamera = FlxG.camera;
 		camGame = new FlxCamera();
+		camCinem = new FlxCamera();
 		camHUD = new FlxCamera();
 		camOther = new FlxCamera();
 		luaTpadCam = new FlxCamera();
@@ -406,6 +410,7 @@ class PlayState extends MusicBeatState
 		luaTpadCam.bgColor.alpha = 0;
 
 		FlxG.cameras.reset(camGame);
+		FlxG.cameras.add(camCinem, false);
 		FlxG.cameras.add(camHUD, false);
 		FlxG.cameras.add(camOther, false);
 		FlxG.cameras.add(luaTpadCam, false);
@@ -519,6 +524,23 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'salacappie': //米塔
+			    camHUD.alpha = 0;
+    defaultCamZoom = 0.95;
+    
+    var bg:BGSprite = new BGSprite('sala', -600, -200);
+    bg.updateHitbox();
+    bg.scale.set(1.3, 1.3);
+    add(bg);
+    
+    bg2 = new BGSprite('oscuridad', 0, 0);
+    bg2.updateHitbox();
+    bg2.scrollFactor.set(0, 0);
+    bg2.scale.set(1, 1);
+    bg2.camera = camCinem;
+    bg2.alpha = 0;
+    add(bg2);
+    
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -1169,6 +1191,16 @@ class PlayState extends MusicBeatState
 		add(iconP2);
 		reloadHealthBarColors();
 
+		idle = new FlxSprite(-330, -180);
+    idle.frames = Paths.getSparrowAtlas('dance');
+    idle.animation.addByPrefix('idle', 'luces', 12, true);
+    idle.antialiasing = ClientPrefs.globalAntialiasing;
+    idle.animation.play('idle');
+    idle.scrollFactor.set(0, 0);
+    idle.scale.set(0.7, 0.7);
+    idle.alpha = 0;
+    add(idle);
+		
 		scoreTxt = new FlxText(0, healthBarBG.y + 36, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
@@ -1193,6 +1225,7 @@ class PlayState extends MusicBeatState
 		healthBarBG.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
+		idle.camera = [camHUD];
 		scoreTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
@@ -5143,6 +5176,151 @@ class PlayState extends MusicBeatState
 	var lastStepHit:Int = -1;
 	override function stepHit()
 	{
+		if(curStage == 'salacappie') {
+		if (curStep == 10)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.7}, 10, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 130)
+    {
+    this.camGame.flash(FlxColor.WHITE, 1);
+    FlxTween.tween(this.camHUD, {alpha: 1}, 3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 373)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 1}, 10, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 510)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.7}, 0.4, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 578)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 1}, 0.5, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 640)
+    {
+    this.camGame.flash(FlxColor.WHITE, 1);
+    FlxTween.tween(this, {defaultCamZoom: 0.7}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 767)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.55}, 0.5, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 1025)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.7}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 1140)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.85}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 1150)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.7}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 1405)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.8}, 0.4, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 1470)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.95}, 0.4, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 1535)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.6}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 1665)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.7}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 1920)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.9}, 0.4, {ease: FlxEase.quadInOut});
+    this.camCinem.flash(FlxColor.WHITE, 1);
+    idle.alpha = 1;
+    bg2.alpha = 1;
+    }
+    
+    if (curStep == 2030)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.7}, 0.4, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 2047)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.9}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 2175)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.55}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 2432)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.7}, 0.4, {ease: FlxEase.quadInOut});
+    this.camCinem.flash(FlxColor.WHITE, 1);
+    idle.alpha = 0;
+    bg2.alpha = 0;
+    }
+    
+    if (curStep == 2559)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.95}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 2614)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.7}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 2622)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.95}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 2686)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.7}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 2719)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.95}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 2783)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.8}, 0.3, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 2815)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.6}, 0.4, {ease: FlxEase.quadInOut});
+    }
+    
+    if (curStep == 2920)
+    {
+    FlxTween.tween(this, {defaultCamZoom: 0.55}, 0.4, {ease: FlxEase.quadInOut});
+    }
+  }
+		
 		super.stepHit();
 		if (Math.abs(FlxG.sound.music.time - (Conductor.songPosition - Conductor.offset)) > (20 * playbackRate)
 			|| (SONG.needsVoices && Math.abs(vocals.time - (Conductor.songPosition - Conductor.offset)) > (20 * playbackRate)))
