@@ -537,7 +537,7 @@ class PlayState extends MusicBeatState
     bg2.updateHitbox();
     bg2.scrollFactor.set(0, 0);
     bg2.scale.set(1, 1);
-    bg2.camera = [camCinem];
+    bg2.camera = camCinem;
     bg2.alpha = 0;
     add(bg2);
     
@@ -1225,7 +1225,7 @@ class PlayState extends MusicBeatState
 		healthBarBG.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
-		idle.camera = [camHUD];
+		idle.camera = camHUD;
 		scoreTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
@@ -2230,6 +2230,7 @@ class PlayState extends MusicBeatState
 					case 1:
 						countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 						countdownReady.cameras = [camHUD];
+						countdownReady.visible = false;
 						countdownReady.scrollFactor.set();
 						countdownReady.updateHitbox();
 
@@ -2251,6 +2252,7 @@ class PlayState extends MusicBeatState
 					case 2:
 						countdownSet = new FlxSprite().loadGraphic(Paths.image(introAlts[1]));
 						countdownSet.cameras = [camHUD];
+						countdownSet.visible = false;
 						countdownSet.scrollFactor.set();
 
 						if (PlayState.isPixelStage)
@@ -2272,6 +2274,7 @@ class PlayState extends MusicBeatState
 						countdownGo = new FlxSprite().loadGraphic(Paths.image(introAlts[2]));
 						countdownGo.cameras = [camHUD];
 						countdownGo.scrollFactor.set();
+						countdownGo.visible = false;
 
 						if (PlayState.isPixelStage)
 							countdownGo.setGraphicSize(Std.int(countdownGo.width * daPixelZoom));
